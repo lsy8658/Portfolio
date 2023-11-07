@@ -20,7 +20,7 @@ export default function DarkModeToggle() {
   };
   return (
     <div className="darkmode_container" onClick={darkmodehandler}>
-      <button className={dark && "dark"}></button>
+      <button className={dark ? "dark" : "light"}></button>
     </div>
   );
 }
