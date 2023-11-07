@@ -1,0 +1,26 @@
+@import "../../globals/mixin.scss";
+.chat_container {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 300px;
+  height: 300px;
+  background: #212121;
+  border-radius: 16px;
+  box-sizing: border-box;
+  padding: 20px;
+  transition: ease 0.3s;
+  .chat_wrap {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 20px;
+  }
+}
+
+@include xl {
+  .chat_container {
+    width: 400px;
+    height: 400px;
+  }
+}

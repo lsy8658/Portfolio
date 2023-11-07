@@ -6,7 +6,7 @@ export const routes = [
   {
     path: "/",
     id: "home",
-    element: <ChatTest />,
+    element: <Home />,
   },
   {
     path: "/chatRoom/:id",

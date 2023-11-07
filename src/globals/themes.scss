@@ -1,0 +1,28 @@
+@import "./_variables.scss";
+
+/*
+    dark mode theme
+*/
+
+$text-color-1: #232323;
+$text-color-2: #fff;
+$bg-color-1: #fff;
+$bg-color-2: #232323;
+$btn-color-1: #fff;
+$btn-color-2: #232323;
+$btn-bg-color-1: #232323;
+$btn-bg-color-2: #fff;
+
+html[color-theme="light"] {
+  --color-text: #{$text-color-1};
+  --color-background: #{$bg-color-1};
+  --color-btn: #{$btn-color-1};
+  --color-btn-bg: #{$btn-bg-color-1};
+}
+
+html[color-theme="dark"] {
+  --color-text: #{$text-color-2};
+  --color-background: #{$bg-color-2};
+  --color-btn: #{$btn-color-2};
+  --color-btn-bg: #{$btn-bg-color-2};
+}
