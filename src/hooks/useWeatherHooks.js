@@ -22,6 +22,8 @@ export const useWeatherHooks = () => {
 
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
+    } else {
+      console.log("navigator.geolocation 값이 없습니다.");
     }
   };
 

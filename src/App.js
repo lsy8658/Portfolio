@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 import DarkModeToggle from "./components/darkmode/DarkModeToggle";
-import { useWeatherHooks } from "./hooks/weatherHooks";
-
+import { useWeatherHooks } from "./hooks/useWeatherHooks";
+import WeatherBox from "./components/weatherBox/WeatherBox";
 function App() {
   const { getCurrentlocation } = useWeatherHooks();
 
@@ -20,6 +20,7 @@ function App() {
       <DarkModeToggle />
       <Nav />
       <Routers />
+      <WeatherBox />
     </div>
   );
 }
