@@ -1,37 +1,40 @@
-import { useState } from "react";
-import { setCurrentLocation } from "../redux/reducers/weatherReducer";
-import { useDispatch } from "react-redux";
+import { useState, useEffect } from "react";
+import { weatherForecastApi } from "../api/weatherApi";
+export const useGeolocation = () => {
+  const [location, setLocation] = useState();
+  const success = (location) => {
+    console.log(location);
+    setLocation({
+      lat: location.coords.latitude,
+      lon: location.coords.longitude,
+    });
+    return location;
+  };
 
-export const useWeatherHooks = () => {
-  const dispatch = useDispatch();
-
-  const getCurrentlocation = () => {
-    const success = (position) => {
-      if (!position) return;
-      dispatch(
-        setCurrentLocation({
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        })
-      );
-    };
-
-    const error = (error) => {
-      console.log(error);
-    };
-
+  const error = (error) => {
+    setLocation({
+      error,
+    });
+    console.log(error);
+  };
+  useEffect(() => {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(success, error);
     } else {
       console.log("navigator.geolocation 값이 없습니다.");
     }
-  };
-
-  return {
-    getCurrentlocation,
-  };
+  }, []);
+  return location;
 };
 
+// export const useForecastWeather =  () => {
+//   const location =  useGeolocation();
+//   let result;
+//   if (location) {
+//     result = weatherForecastApi(location.lat, location.lon);
+//   }
+//   return result;
+// };
 /*
 Geolocation.getCurrentPosition(): 
 장치의 현재 위치를 가져온다.

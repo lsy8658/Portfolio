@@ -10,9 +10,8 @@ export const weatherSlice = createSlice({
   name: "weather",
   initialState,
   reducers: {
-    setCurrentLocation: (state, action) => {
-      state.myLocation.lat = action.payload.lat;
-      state.myLocation.lon = action.payload.lng;
+    setCurrentLocation: (state, payload) => {
+      state.myLocation = payload;
     },
   },
 });

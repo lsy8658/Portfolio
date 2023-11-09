@@ -1,19 +1,36 @@
-import React, { useEffect, useState } from "react";
-import { useSelector } from "react-redux";
-import { weatherForecastApi } from "../../api/weatherApi";
-
+import { useEffect } from "react";
+import { ForecastQuery } from "../../queries/weatherQuery";
+import { getCurrentlocation } from "../../hooks/useWeatherHooks";
 export default function WeatherBox() {
-  const [location, setLocation] = useState();
-  const currentLocation = useSelector((state) => {
-    return state.weather.myLocation;
-  });
+  // const { isLoading, data } = ForecastQuery();
+  // if (isLoading) {
+  //   return <h1>Loading...</h1>;
+  // }
 
-  //   useEffect(() => {
-  //     console.log(currentLocation);
-  //     if (currentLocation) {
-  //       setLocation(currentLocation);
-  //     }
-  //   }, [currentLocation]);
+  // if (data) {
+  //   console.log(data);
+  // }
 
-  return <div>weatherBox</div>;
+  return (
+    <div>
+      {/* {data.map((todo) => (
+        <li key={todo.id}>{todo.country}</li>
+      ))} */}
+    </div>
+  );
 }
+
+// useEffect(() => {
+//   const getForecastWeather = async () => {
+//     try {
+//       if (location) {
+//         const data = await weatherForecastApi(location.lat, location.lon);
+//         console.log("data =>", data);
+//       }
+//     } catch (e) {
+//       console.log(e);
+//     }
+//   };
+//   getForecastWeather();
+
+// }, [location]);

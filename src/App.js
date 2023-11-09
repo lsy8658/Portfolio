@@ -6,15 +6,25 @@ import { useEffect } from "react";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 import DarkModeToggle from "./components/darkmode/DarkModeToggle";
-import { useWeatherHooks } from "./hooks/useWeatherHooks";
+import { useGeolocation } from "./hooks/useWeatherHooks";
 import WeatherBox from "./components/weatherBox/WeatherBox";
+import { weatherForecastApi } from "./api/weatherApi";
 function App() {
-  const { getCurrentlocation } = useWeatherHooks();
+  // const lo = useGeolocation();
+  // useEffect(() => {
+  //   const fetch = async () => {
+  //     try {
+  //       const res = await weatherForecastApi(lo.lat, lo.lon);
+  //       console.log(res);
+  //     } catch (e) {
+  //       console.log(e);
+  //     }
+  //   };
 
-  useEffect(() => {
-    getCurrentlocation();
-  }, []);
-
+  //   if (lo) {
+  //     fetch();
+  //   }
+  // }, [lo]);
   return (
     <div className="App">
       <DarkModeToggle />
