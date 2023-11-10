@@ -1,10 +1,11 @@
 @import "../../globals/themes.scss";
+@import "../../globals/mixin.scss";
 .darkmode_container {
   position: relative;
   width: 40px;
   height: 24px;
   border-radius: 18px;
-  background: var(--color-btn-bg);
+  background: var(--color-darkmode-btn-bg);
   cursor: pointer;
   button {
     position: absolute;
@@ -14,11 +15,33 @@
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: var(--color-btn);
+    background: var(--color-darkmode-btn);
     transition: ease 0.3s;
 
     &.dark {
       left: 20px;
     }
   }
+}
+@include mobile-sm {
+  .darkmode_container {
+    margin-left: 0;
+  }
+}
+@include sm {
+  .darkmode_container {
+    margin-left: 16px;
+  }
+}
+
+@include md {
+  .darkmode_container {
+    margin-left: 44px;
+  }
+}
+
+@include xl {
+  // .darkmode_container {
+  //   width: 500px;
+  // }
 }

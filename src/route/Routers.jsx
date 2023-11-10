@@ -5,12 +5,12 @@ import ChatTest from "../pages/chatTest/ChatTest";
 export const routes = [
   {
     path: "/",
-    id: "home",
+    id: "Home",
     element: <Home />,
   },
   {
     path: "/chatRoom/:id",
-    id: "chatRoom",
+    id: "ChatRoom",
     element: <ChatTest />,
   },
 ];

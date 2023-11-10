@@ -1,0 +1,91 @@
+@import "../../globals/themes.scss";
+@import "../../globals/mixin.scss";
+.navbar {
+  width: 100%;
+
+  box-sizing: border-box;
+  .container {
+    height: 59px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    // max-width: 1048px;
+    background: var(--color-background);
+
+    .logo {
+      font-family: "Pretendard Bold";
+      font-size: 20px;
+      color: var(--color-text);
+    }
+    .side {
+      display: flex;
+      align-items: center;
+      .mobile_menu {
+        color: var(--color-text);
+      }
+      .menus {
+        a {
+          margin-right: 20px;
+          &:hover {
+            color: #ccc;
+          }
+        }
+      }
+    }
+    a {
+      color: var(--color-text);
+    }
+  }
+}
+@include mobile-sm {
+  .navbar {
+    padding: 0 8px;
+    .container {
+      .side {
+        .menus {
+          display: none;
+        }
+        .mobile_menu {
+          margin-left: 16px;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@include sm {
+  .navbar {
+    .container {
+      .side {
+        .menus {
+          display: block;
+        }
+        .mobile_menu {
+          display: none;
+        }
+      }
+    }
+  }
+}
+@include md {
+  .navbar {
+    padding: 0 12px;
+    .container {
+      max-width: 1048px;
+      margin: 0 auto;
+      .side {
+      }
+    }
+  }
+}
+@include lg {
+  .container {
+    width: 100%;
+    justify-content: center;
+    background: purple;
+  }
+}
+@include xl {
+  .container {
+  }
+}

@@ -2,32 +2,14 @@ import "./globals/global.scss";
 import "./globals/mixin.scss";
 import "./globals/fonts.scss";
 import "./globals/themes.scss";
-import { useEffect } from "react";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
-import DarkModeToggle from "./components/darkmode/DarkModeToggle";
-import { useGeolocation } from "./hooks/useWeatherHooks";
-import WeatherBox from "./components/weatherBox/WeatherBox";
-import { weatherForecastApi } from "./api/weatherApi";
-function App() {
-  // const lo = useGeolocation();
-  // useEffect(() => {
-  //   const fetch = async () => {
-  //     try {
-  //       const res = await weatherForecastApi(lo.lat, lo.lon);
-  //       console.log(res);
-  //     } catch (e) {
-  //       console.log(e);
-  //     }
-  //   };
 
-  //   if (lo) {
-  //     fetch();
-  //   }
-  // }, [lo]);
+import WeatherBox from "./components/weatherBox/WeatherBox";
+
+function App() {
   return (
     <div className="App">
-      <DarkModeToggle />
       <Nav />
       <Routers />
       <WeatherBox />

@@ -7,6 +7,10 @@
 // 큰	lg	992px
 // 아주 큰	xl	1200px
 
+/* 나머지 작은 디바이스들 */
+$breakpoint-mobile-sm: "280px";
+$breakpoint-mobile-md: "335px";
+
 /* 세로모드 모바일 디바이스 ( 해상도가 576px ) */
 $break-sm: "576px";
 

@@ -1,95 +1,268 @@
 const data = [
   {
     coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+      lon: -1.13,
+      lat: 51.51,
     },
-    country: "KR",
-    id: 1842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+    weather: [
+      {
+        id: 250,
+        main: "Sunny",
+        description: "light rain",
+        icon: "10n",
+      },
+    ],
+    base: "cmc stations",
+    main: {
+      temp: 286.164,
+      pressure: 1017.58,
+      humidity: 96,
+      temp_min: 286.164,
+      temp_max: 286.164,
+      sea_level: 1027.69,
+      grnd_level: 1017.58,
     },
-    country: "KR",
-    id: 2842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+    wind: {
+      speed: 3.61,
+      deg: 165.001,
     },
-    country: "KR",
-    id: 3842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+    rain: {
+      "3h": 0.185,
     },
-    country: "KR",
-    id: 4842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+    clouds: {
+      all: 80,
     },
-    country: "KR",
-    id: 5842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
+    dt: 1446583128,
+    sys: {
+      message: 0.003,
+      country: "GB",
+      sunrise: 1446533902,
+      sunset: 1446568141,
     },
-    country: "KR",
-    id: 6842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
+    id: 2643743,
+    name: "seoul",
+    cod: 200,
   },
-  {
-    coord: {
-      lat: 37.6131,
-      lon: 126.9008,
-    },
-    country: "KR",
-    id: 7842485,
-    name: "Goyang-si",
-    population: 1073069,
-    sunrise: 1699394638,
-    sunset: 1699432095,
-    timezone: 32400,
-  },
+  // {
+  //   coord: {
+  //     lon: -0.13,
+  //     lat: 51.51,
+  //   },
+  //   weather: [
+  //     {
+  //       id: 500,
+  //       main: "Rain",
+  //       description: "light rain",
+  //       icon: "10n",
+  //     },
+  //   ],
+  //   base: "cmc stations",
+  //   main: {
+  //     temp: 286.164,
+  //     pressure: 1017.58,
+  //     humidity: 96,
+  //     temp_min: 286.164,
+  //     temp_max: 286.164,
+  //     sea_level: 1027.69,
+  //     grnd_level: 1017.58,
+  //   },
+  //   wind: {
+  //     speed: 3.61,
+  //     deg: 165.001,
+  //   },
+  //   rain: {
+  //     "3h": 0.185,
+  //   },
+  //   clouds: {
+  //     all: 80,
+  //   },
+  //   dt: 1446583128,
+  //   sys: {
+  //     message: 0.003,
+  //     country: "GB",
+  //     sunrise: 1446533902,
+  //     sunset: 1446568141,
+  //   },
+  //   id: 2643743,
+  //   name: "london",
+  //   cod: 200,
+  // },
+  // {
+  //   coord: {
+  //     lon: -0.13,
+  //     lat: 51.51,
+  //   },
+  //   weather: [
+  //     {
+  //       id: 500,
+  //       main: "Rain",
+  //       description: "light rain",
+  //       icon: "10n",
+  //     },
+  //   ],
+  //   base: "cmc stations",
+  //   main: {
+  //     temp: 286.164,
+  //     pressure: 1017.58,
+  //     humidity: 96,
+  //     temp_min: 286.164,
+  //     temp_max: 286.164,
+  //     sea_level: 1027.69,
+  //     grnd_level: 1017.58,
+  //   },
+  //   wind: {
+  //     speed: 3.61,
+  //     deg: 165.001,
+  //   },
+  //   rain: {
+  //     "3h": 0.185,
+  //   },
+  //   clouds: {
+  //     all: 80,
+  //   },
+  //   dt: 1446583128,
+  //   sys: {
+  //     message: 0.003,
+  //     country: "GB",
+  //     sunrise: 1446533902,
+  //     sunset: 1446568141,
+  //   },
+  //   id: 2643743,
+  //   name: "1ondon",
+  //   cod: 200,
+  // },
+  // {
+  //   coord: {
+  //     lon: -0.13,
+  //     lat: 51.51,
+  //   },
+  //   weather: [
+  //     {
+  //       id: 200,
+  //       main: "Sunny",
+  //       description: "light rain",
+  //       icon: "10n",
+  //     },
+  //   ],
+  //   base: "cmc stations",
+  //   main: {
+  //     temp: 286.164,
+  //     pressure: 1017.58,
+  //     humidity: 96,
+  //     temp_min: 281.2,
+  //     temp_max: 282.2,
+  //     sea_level: 1027.69,
+  //     grnd_level: 1017.58,
+  //   },
+  //   wind: {
+  //     speed: 3.61,
+  //     deg: 165.001,
+  //   },
+  //   rain: {
+  //     "3h": 0.185,
+  //   },
+  //   clouds: {
+  //     all: 80,
+  //   },
+  //   dt: 1446583128,
+  //   sys: {
+  //     message: 0.003,
+  //     country: "GB",
+  //     sunrise: 1446533902,
+  //     sunset: 1446568141,
+  //   },
+  //   id: 2643743,
+  //   name: "2ondon",
+  //   cod: 200,
+  // },
+  // {
+  //   coord: {
+  //     lon: -0.13,
+  //     lat: 51.51,
+  //   },
+  //   weather: [
+  //     {
+  //       id: 300,
+  //       main: "Rain",
+  //       description: "light rain",
+  //       icon: "10n",
+  //     },
+  //   ],
+  //   base: "cmc stations",
+  //   main: {
+  //     temp: 286.164,
+  //     pressure: 1017.58,
+  //     humidity: 96,
+  //     temp_min: 286.164,
+  //     temp_max: 286.164,
+  //     sea_level: 1027.69,
+  //     grnd_level: 1017.58,
+  //   },
+  //   wind: {
+  //     speed: 3.61,
+  //     deg: 165.001,
+  //   },
+  //   rain: {
+  //     "3h": 0.185,
+  //   },
+  //   clouds: {
+  //     all: 80,
+  //   },
+  //   dt: 1446583128,
+  //   sys: {
+  //     message: 0.003,
+  //     country: "GB",
+  //     sunrise: 1446533902,
+  //     sunset: 1446568141,
+  //   },
+  //   id: 2643743,
+  //   name: "3ondon",
+  //   cod: 200,
+  // },
+  // {
+  //   coord: {
+  //     lon: -0.13,
+  //     lat: 51.51,
+  //   },
+  //   weather: [
+  //     {
+  //       id: 500,
+  //       main: "Rain",
+  //       description: "light rain",
+  //       icon: "10n",
+  //     },
+  //   ],
+  //   base: "cmc stations",
+  //   main: {
+  //     temp: 286.164,
+  //     pressure: 1017.58,
+  //     humidity: 96,
+  //     temp_min: 286.164,
+  //     temp_max: 286.164,
+  //     sea_level: 1027.69,
+  //     grnd_level: 1017.58,
+  //   },
+  //   wind: {
+  //     speed: 3.61,
+  //     deg: 165.001,
+  //   },
+  //   rain: {
+  //     "3h": 0.185,
+  //   },
+  //   clouds: {
+  //     all: 80,
+  //   },
+  //   dt: 1446583128,
+  //   sys: {
+  //     message: 0.003,
+  //     country: "GB",
+  //     sunrise: 1446533902,
+  //     sunset: 1446568141,
+  //   },
+  //   id: 2643743,
+  //   name: "5ondon",
+  //   cod: 200,
+  // },
 ];
 
 export const weatherDummy = () => {
