@@ -10,7 +10,7 @@ export default function WeatherBox() {
   /* 현 위치 위경도 가져오기 */
   useEffect(() => {
     const success = (location) => {
-      console.log(location);
+      // console.log(location);
       setLocation({
         lat: location.coords.latitude,
         lon: location.coords.longitude,
@@ -30,7 +30,7 @@ export default function WeatherBox() {
       if (location) {
         setIsLoading(true);
         const result = await weatherForecastApi(location);
-        console.log("result ==>", result);
+        // console.log("result ==>", result);
         setIsLoading(false);
         setWeather(result);
       }

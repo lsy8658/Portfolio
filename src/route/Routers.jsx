@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import ChatTest from "../pages/chatTest/ChatTest";
-
+import Test from "../pages/test/Test";
 export const routes = [
   {
     path: "/",
@@ -11,7 +11,7 @@ export const routes = [
   {
     path: "/chatRoom/:id",
     id: "ChatRoom",
-    element: <ChatTest />,
+    element: <Test />,
   },
 ];
 

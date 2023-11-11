@@ -5,14 +5,13 @@ import "./globals/themes.scss";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 
-import WeatherBox from "./components/weatherBox/WeatherBox";
-
 function App() {
   return (
     <div className="App">
       <Nav />
-      <Routers />
-      <WeatherBox />
+      <div className="main_container">
+        <Routers />
+      </div>
     </div>
   );
 }

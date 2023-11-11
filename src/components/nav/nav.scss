@@ -1,16 +1,19 @@
 @import "../../globals/themes.scss";
 @import "../../globals/mixin.scss";
+.nav_container {
+  position: fixed;
+  width: 100%;
+}
 .navbar {
   width: 100%;
-
   box-sizing: border-box;
+  background: var(--color-background);
   .container {
     height: 59px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     // max-width: 1048px;
-    background: var(--color-background);
 
     .logo {
       font-family: "Pretendard Bold";
@@ -27,7 +30,7 @@
         a {
           margin-right: 20px;
           &:hover {
-            color: #ccc;
+            color: #7a7373;
           }
         }
       }
@@ -35,6 +38,37 @@
     a {
       color: var(--color-text);
     }
+  }
+}
+.mobile_navbar {
+  height: 0;
+  &.open {
+    animation: slideMobileNav 0.3s ease;
+  }
+  .menus {
+    display: flex;
+    flex-direction: column;
+    transition: ease 0.3s;
+    background: var(--color-diff--background);
+    a {
+      box-sizing: border-box;
+      padding: 18px 20px;
+      height: 56px;
+      color: var(--color-diff-text);
+      border-bottom: 1px solid var(--color-diff-text);
+      &:hover {
+        color: #7a7373;
+      }
+    }
+  }
+}
+
+@keyframes slideMobileNav {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 @include mobile-sm {
@@ -66,6 +100,9 @@
       }
     }
   }
+  .mobile_navbar {
+    display: none;
+  }
 }
 @include md {
   .navbar {
@@ -82,7 +119,6 @@
   .container {
     width: 100%;
     justify-content: center;
-    background: purple;
   }
 }
 @include xl {

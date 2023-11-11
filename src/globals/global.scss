@@ -9,6 +9,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   font-family: "Pretendard Regular";
 }
@@ -18,5 +22,8 @@ body {
   background: var(--color-background);
 }
 
+.main_container {
+  padding-top: 59px;
+}
 @include xl {
 }
