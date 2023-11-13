@@ -1,49 +1,41 @@
 export const weatherHook = (data) => {
   const weatherIdCheck = (id) => {
-    console.log("id", id);
     let state = {
       text: "",
       imgSrc: "",
     };
 
     if (id < 300) {
-      console.log("1");
       state = {
         text: "뇌우 (Thunderstorm)",
         imgSrc: "assets/images/thunderstorm.png",
       };
     } else if (id < 500) {
-      console.log("2");
       state = {
         text: "이슬비 (Drizzle)",
         imgSrc: "assets/images/drizzle.png",
       };
     } else if (id < 600) {
-      console.log("3");
       state = {
         text: "비 (Rain)",
         imgSrc: "assets/images/rain.png",
       };
     } else if (id < 700) {
-      console.log("4");
       state = {
         text: "눈 (Snow)",
         imgSrc: "assets/images/snow.png",
       };
     } else if (id < 800) {
-      console.log("5");
       state = {
         text: "안개 (mist)",
         imgSrc: "assets/images/mist.png",
       };
     } else if (800 === id) {
-      console.log("6");
       state = {
         text: "맑은 하늘 (Clear)",
         imgSrc: "assets/images/clear.jpg",
       };
     } else if (id < 900) {
-      console.log("6");
       state = {
         text: "구름 (Clouds)",
         imgSrc: "assets/images/clouds.png",

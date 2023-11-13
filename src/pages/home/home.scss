@@ -1,1 +1,36 @@
 @import "../../globals/mixin.scss";
+
+.home_container {
+  padding-top: 59px;
+  height: calc(100vh - 59px);
+  background: var(--color-background);
+  top: 59px;
+  .sub_txt {
+    padding-top: 20px;
+    color: var(--color-text-Ani);
+    text-align: center;
+  }
+}
+
+@include mobile-sm {
+  .home_container {
+    .sub_txt {
+      font-size: 12px;
+    }
+  }
+}
+@include mobile-md {
+  .home_container {
+    .sub_txt {
+      font-size: 18px;
+    }
+  }
+}
+@include md {
+  .home_container {
+    .sub_txt {
+      padding-top: 40px;
+      font-size: 36px;
+    }
+  }
+}

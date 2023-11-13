@@ -1,14 +1,20 @@
 @import "./_variables.scss";
 
+//light mode
 $text-color-1: #232323;
 $text-color-2: #fff;
 $bg-color-1: #fff;
 $bg-color-2: #232323;
+$text-ani-1: #fedc45;
+$musicBox-1: #fedc45;
 
+// dark mode
 $btn-darkmode-color-1: #fff;
 $btn-darkmode-color-2: #232323;
 $btn-darkmode-bg-color-1: #232323;
 $btn-darkmode-bg-color-2: #fff;
+$text-ani-2: #232323;
+$musicBox-2: #575656;
 
 html[color-theme="light"] {
   --color-text: #{$text-color-1};
@@ -19,6 +25,10 @@ html[color-theme="light"] {
 
   --color-darkmode-btn: #{$btn-darkmode-color-1};
   --color-darkmode-btn-bg: #{$btn-darkmode-bg-color-1};
+
+  --color-text-Ani: #{$text-ani-2};
+
+  --color-music-Box: #{$musicBox-2};
 }
 
 html[color-theme="dark"] {
@@ -30,4 +40,8 @@ html[color-theme="dark"] {
 
   --color-darkmode-btn: #{$btn-darkmode-color-2};
   --color-darkmode-btn-bg: #{$btn-darkmode-bg-color-2};
+
+  --color-text-Ani: #{$text-ani-1};
+
+  --color-music-Box: #{$musicBox-1};
 }

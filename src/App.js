@@ -5,6 +5,8 @@ import "./globals/themes.scss";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 
+import MusicPlayer from "./components/musicplayer/MusicPlayer";
+import ScrollTopButton from "./components/scrollTopButton/ScrollTopButton";
 function App() {
   return (
     <div className="App">
@@ -12,6 +14,8 @@ function App() {
       <div className="main_container">
         <Routers />
       </div>
+      <ScrollTopButton />
+      <MusicPlayer />
     </div>
   );
 }

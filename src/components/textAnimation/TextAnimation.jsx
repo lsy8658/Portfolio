@@ -2,28 +2,30 @@ import React, { useEffect, useState } from "react";
 import "./textAnimation.scss";
 export default function TextAnimation(props) {
   const [aniText, setAniText] = useState("");
+  const [count, setCount] = useState(0);
   const { text } = props;
 
-  const textLen = text.split("");
-  const aniTextLen = aniText.split("");
+  useEffect(() => {
+    const textInterval = setInterval(() => {
+      setAniText(aniText + text[count]);
+      setCount(count + 1);
+    }, 200);
 
-  const textInterval = () => {
-    if (textLen.length === aniTextLen.length) {
+    if (count === text.length) {
       clearInterval(textInterval);
-      return;
     }
-    const txt = aniText + textLen[aniTextLen.length];
 
-    setAniText(txt);
-    console.log("aniText =>", aniText);
-  };
-
-  setInterval(textInterval, 1000);
+    return () => clearInterval(textInterval);
+  });
 
   return (
-    <div className="container">
+    <div className="text_ani_container">
       <h2 className="text">{aniText}</h2>
       <span className="cursor">|</span>
     </div>
   );
 }
+
+/*
+ setinterval 작동 중지 과정 필요 
+*/
