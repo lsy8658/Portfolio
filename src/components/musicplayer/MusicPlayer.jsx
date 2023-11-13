@@ -56,7 +56,6 @@ export default function MusicPlayer() {
             if (count === audios.length - 1) {
               setCount(0);
             } else {
-              console.log(count);
               setCount(count + 1);
             }
           }}

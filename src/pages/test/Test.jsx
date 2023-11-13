@@ -1,4 +1,4 @@
-import React from "react";
+import "./test.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { increment, decrement } from "../../redux/reducers/counterReducer";
 
@@ -10,7 +10,7 @@ export default function Test() {
   });
   const dispatch = useDispatch();
   return (
-    <div>
+    <div className="test_container">
       {count}
       <button onClick={() => dispatch(increment())}>add</button>
       <button onClick={() => dispatch(decrement())}>min</button>

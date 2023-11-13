@@ -19,7 +19,7 @@ root.render(
           <App />
         </Provider>
         {/* </SocketContextProvider> */}
-        <ReactQueryDevtools />
+        {/* <ReactQueryDevtools /> */}
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>
