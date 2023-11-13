@@ -50,7 +50,7 @@ export default function WeatherBox() {
 
   return (
     <>
-      {isLoading && <div className="loading">isLoading...</div>}
+      {isLoading && <div className="loading">isLoading..</div>}
       {weather ? (
         <div className="weather_container">
           <div className="weather_wrap">
