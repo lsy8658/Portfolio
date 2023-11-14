@@ -24,12 +24,16 @@ export default function WeatherBox() {
   }, []);
 
   const getWeather = async () => {
-    if (location) {
-      setIsLoading(true);
-      const result = await weatherForecastApi(location);
-      // console.log("result ==>", result);
-      setIsLoading(false);
-      setWeather(result);
+    try {
+      if (location) {
+        setIsLoading(true);
+        const result = await weatherForecastApi(location);
+        // console.log("result ==>", result);
+        setIsLoading(false);
+        setWeather(result);
+      }
+    } catch (e) {
+      console.log(e);
     }
   };
 
