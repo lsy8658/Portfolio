@@ -2,57 +2,42 @@ import { useEffect, useState } from "react";
 import { weatherForecastApi } from "../../api/weatherApi";
 import "./weatherbox.scss";
 export default function WeatherBox() {
-  const [location, setLocation] = useState();
   const [weather, setWeather] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
-  /* 현 위치 위경도 가져오기 */
-
   const getWeather = () => {
     const success = (position) => {
-      // console.log(location);
       const location = {
         lat: position.coords.latitude,
         lon: position.coords.longitude,
       };
       console.log(location);
       const fetchData = async () => {
-        try {
-          setIsLoading(true);
-          const result = await weatherForecastApi(location);
-          // console.log("result ==>", result);
-          setIsLoading(false);
-          setWeather(result);
-        } catch (e) {
-          console.log(e);
+        if (location) {
+          try {
+            setIsLoading(true);
+            const result = await weatherForecastApi(location);
+            setIsLoading(false);
+            if (result) {
+              setWeather(result);
+            } else {
+              alert("오늘은 조회할 수 없습니다. 😅");
+            }
+          } catch (e) {
+            console.log(e);
+          }
+        } else {
+          alert("현 위치 값이 없습니다. 😅");
         }
       };
       fetchData();
     };
     const error = (error) => {
-      setLocation({
-        lat: -1,
-        lon: -1,
-      });
       console.log(error);
     };
+    /* 현 위치 위경도 가져오기 */
     navigator.geolocation.getCurrentPosition(success, error);
   };
-
-  /* openweather api 렌더링시 불러오기 */
-  // useEffect(() => {
-  //   const getWeather = async () => {
-  //     if (location) {
-  //       setIsLoading(true);
-  //       const result = await weatherForecastApi(location);
-  //       // console.log("result ==>", result);
-  //       setIsLoading(false);
-  //       setWeather(result);
-  //     }
-  //   };
-  //   getWeather();
-  //   console.log("weather=>", weather);
-  // }, [location]);
 
   return (
     <>
