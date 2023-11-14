@@ -7,13 +7,27 @@ export default function WeatherBox() {
   const [isLoading, setIsLoading] = useState(false);
 
   /* 현 위치 위경도 가져오기 */
-  useEffect(() => {
-    const success = (location) => {
+
+  const getWeather = () => {
+    const success = (position) => {
       // console.log(location);
-      setLocation({
-        lat: location.coords.latitude,
-        lon: location.coords.longitude,
-      });
+      const location = {
+        lat: position.coords.latitude,
+        lon: position.coords.longitude,
+      };
+      console.log(location);
+      const fetchData = async () => {
+        try {
+          setIsLoading(true);
+          const result = await weatherForecastApi(location);
+          // console.log("result ==>", result);
+          setIsLoading(false);
+          setWeather(result);
+        } catch (e) {
+          console.log(e);
+        }
+      };
+      fetchData();
     };
     const error = (error) => {
       setLocation({
@@ -22,25 +36,7 @@ export default function WeatherBox() {
       });
       console.log(error);
     };
-    return () => {
-      navigator.geolocation.getCurrentPosition(success, error);
-    };
-  }, []);
-
-  useEffect(() => {
-    console.log(location);
-  }, [location]);
-
-  const getWeather = async () => {
-    try {
-      setIsLoading(true);
-      const result = await weatherForecastApi(location);
-      // console.log("result ==>", result);
-      setIsLoading(false);
-      setWeather(result);
-    } catch (e) {
-      console.log(e);
-    }
+    navigator.geolocation.getCurrentPosition(success, error);
   };
 
   /* openweather api 렌더링시 불러오기 */
