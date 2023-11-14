@@ -5,9 +5,9 @@ export default function Home() {
   return (
     <div className="section">
       <div className="home_text_wrap">
-        <TextAnimation text={"음악전공에서 개발자로"} time={200} />
+        <TextAnimation text={"Frontend Developer"} time={200} />
       </div>
-      <p className="sub_txt">프론트앤드 이성윤입니다.</p>
+      <p className="sub_txt">이성윤입니다.</p>
       <WeatherBox />
     </div>
   );

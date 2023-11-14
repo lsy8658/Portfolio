@@ -2,28 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import TextAnimation from "../../components/textAnimation/TextAnimation";
 import "./profile.scss";
 export default function Profile() {
-  const [target, setTarget] = useState(null);
-
-  useEffect(() => {
-    let observer;
-    const callback = (entry) => {
-      entry.forEach((e) => {
-        console.log(e);
-      });
-    };
-    if (target) {
-      observer = new IntersectionObserver(callback, {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0.4,
-      });
-      observer.observe(target);
-    }
-    return () => {
-      observer && observer.disconnet();
-    }; // html요소 감지
-  }, [target]);
-
   return (
     <>
       <div className="profile_section">
@@ -41,24 +19,10 @@ export default function Profile() {
           <p>🎓 백석 예술대학교 졸업</p>
         </div>
       </div>
-      <div className="profile_section">
+      {/* <div className="profile_section">
         <h2 className="title">📝Skills</h2>
-        <div className="skills">
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <h1>skill</h1>
-          <div ref={setTarget}>skill</div>
-        </div>
-      </div>
+        <div className="skills"></div>
+      </div> */}
     </>
   );
 }
