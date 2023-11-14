@@ -24,6 +24,7 @@ export default function WeatherBox() {
   }, []);
 
   const getWeather = async () => {
+    console.log("weather api");
     try {
       if (location) {
         setIsLoading(true);
