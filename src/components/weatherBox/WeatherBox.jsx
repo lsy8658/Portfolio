@@ -8,31 +8,25 @@ export default function WeatherBox() {
 
   /* 현 위치 위경도 가져오기 */
   useEffect(() => {
-    const onSuccess = (location) => {
+    const success = (location) => {
       // console.log(location);
       setLocation({
         lat: location.coords.latitude,
         lon: location.coords.longitude,
       });
     };
-    const onError = (error) => {
+    const error = (error) => {
+      setLocation({
+        lat: -1,
+        lon: -1,
+      });
       console.log(error);
     };
     return () => {
-      new Promise((resolve, reject) =>
-        navigator.geolocation.getCurrentPosition(
-          (position) => resolve(onSuccess(position)),
-          (error) => reject(onError(error))
-        )
-      );
+      navigator.geolocation.getCurrentPosition(success, error);
     };
   }, []);
-  /*
-  API 호출 시 API 호출 값을 받기 전까지, 
-  실행되지 않게 설정하지 않아서 발생한 문제(비동기 설정 X)
-  또한, gelocation 메소드는 return 반환이 없다는 것.
-  함수에 new Promise 를 정의하여, 반환되는 값 나오게 만들기
-*/
+
   useEffect(() => {
     console.log(location);
   }, [location]);
