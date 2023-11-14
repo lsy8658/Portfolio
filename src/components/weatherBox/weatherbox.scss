@@ -50,8 +50,8 @@
   background: none;
   border: none;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   img {
     width: 100%;
   }
@@ -61,7 +61,7 @@
   &:hover::after {
     content: "오늘 날씨";
     position: absolute;
-    top: -10px;
+    top: 0px;
     left: 50%;
     transform: translateX(-50%);
     background: var(--color-diff--background);

@@ -9,6 +9,17 @@
     padding-top: 20px;
     color: var(--color-text-Ani);
     text-align: center;
+    animation: ease 5s textAni;
+    white-space: nowrap;
+  }
+}
+
+@keyframes textAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
 
