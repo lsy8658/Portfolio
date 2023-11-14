@@ -23,22 +23,20 @@ export default function WeatherBox() {
     };
   }, []);
 
+  useEffect(() => {
+    console.log(location);
+  }, [location]);
+
   const getWeather = async () => {
-    console.log("weather api");
     try {
-      if (location) {
-        console.log("weather api11");
-        console.log(location);
-        setIsLoading(true);
-        const result = await weatherForecastApi(location);
-        // console.log("result ==>", result);
-        setIsLoading(false);
-        setWeather(result);
-      }
+      setIsLoading(true);
+      const result = await weatherForecastApi(location);
+      // console.log("result ==>", result);
+      setIsLoading(false);
+      setWeather(result);
     } catch (e) {
       console.log(e);
     }
-    console.log("weather33155");
   };
 
   /* openweather api 렌더링시 불러오기 */
