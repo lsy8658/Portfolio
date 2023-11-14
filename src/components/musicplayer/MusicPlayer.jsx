@@ -5,8 +5,9 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { FaRegStopCircle } from "react-icons/fa";
 export default function MusicPlayer() {
   const audios = [
-    "assets/videos/DaJazzBlues-DougMaxwell.mp3",
-    "assets/videos/ClaudioTheWorm-TheGreenOrbs.mp3",
+    "assets/musics/DaJazzBlues-DougMaxwell.mp3",
+    "assets/musics/PianoWaltzLoop-WindowsofKen.mp3",
+    "assets/musics/ClaudioTheWorm-TheGreenOrbs.mp3",
   ];
   const [count, setCount] = useState(0);
   const [play, setPlay] = useState(false);
@@ -23,7 +24,7 @@ export default function MusicPlayer() {
   return (
     <div className="music_container">
       <p className="music_title">
-        {audios[count].split("/videos/")[1].slice(0, -4)}
+        {audios[count].split("/musics/")[1].slice(0, -4)}
       </p>
       <audio src={audios[count]} ref={audioRef} />
       <div className="btns">

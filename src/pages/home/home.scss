@@ -1,10 +1,11 @@
 @import "../../globals/mixin.scss";
 
-.home_container {
-  padding-top: 59px;
-  height: calc(100vh - 59px);
-
+.section {
   top: 59px;
+  .home_text_wrap {
+    padding-top: 130px;
+    text-align: center;
+  }
   .sub_txt {
     padding-top: 20px;
     color: var(--color-text-Ani);
@@ -24,21 +25,24 @@
 }
 
 @include mobile-sm {
-  .home_container {
+  .section {
     .sub_txt {
       font-size: 12px;
     }
   }
 }
 @include mobile-md {
-  .home_container {
+  .section {
     .sub_txt {
       font-size: 18px;
     }
   }
 }
 @include md {
-  .home_container {
+  .section {
+    .home_text_wrap {
+      padding-top: 240px;
+    }
     .sub_txt {
       padding-top: 40px;
       font-size: 36px;

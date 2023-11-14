@@ -1,0 +1,83 @@
+@import "../../globals/mixin.scss";
+
+.profile_section {
+  padding-top: 59px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1048px;
+  .title {
+    padding: 50px 0;
+    color: var(--color-text);
+    font-size: 28px;
+  }
+  .profile_text_wrap {
+  }
+  .info {
+    padding-top: 50px;
+    p {
+      color: var(--color-text);
+      font-size: 18px;
+      padding: 8px 0;
+    }
+  }
+  .my_history {
+    padding-top: 30px;
+    color: var(--color-text);
+    p {
+      padding: 5px 0;
+    }
+  }
+}
+
+@include mobile-sm {
+  .profile_section {
+    .title {
+    }
+    .profile_text_wrap {
+    }
+    .info {
+      p {
+      }
+    }
+    .my_history {
+      p {
+      }
+    }
+  }
+}
+@include mobile-md {
+  .profile_section {
+    .title {
+    }
+    .profile_text_wrap {
+    }
+    .info {
+      p {
+        font-size: 15px;
+      }
+    }
+    .my_history {
+      p {
+        font-size: 15px;
+      }
+    }
+  }
+}
+@include md {
+  .profile_section {
+    .title {
+    }
+    .profile_text_wrap {
+    }
+    .info {
+      p {
+        font-size: 17px;
+      }
+    }
+    .my_history {
+      p {
+        font-size: 17px;
+      }
+    }
+  }
+}

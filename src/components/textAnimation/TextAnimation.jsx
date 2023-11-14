@@ -3,13 +3,16 @@ import "./textAnimation.scss";
 export default function TextAnimation(props) {
   const [aniText, setAniText] = useState("");
   const [count, setCount] = useState(0);
-  const { text } = props;
+  const { text, time } = props;
 
   useEffect(() => {
-    const textInterval = setInterval(() => {
-      setAniText(aniText + text[count]);
-      setCount(count + 1);
-    }, 200);
+    const textInterval = setInterval(
+      () => {
+        setAniText(aniText + text[count]);
+        setCount(count + 1);
+      },
+      time ? time : 200
+    );
 
     if (count === text.length) {
       clearInterval(textInterval);

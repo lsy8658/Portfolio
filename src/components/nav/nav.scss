@@ -2,6 +2,7 @@
 @import "../../globals/mixin.scss";
 .nav_container {
   position: fixed;
+  z-index: 9999;
   width: 100%;
 }
 .navbar {
@@ -19,6 +20,9 @@
       font-family: "Pretendard Bold";
       font-size: 20px;
       color: var(--color-text);
+      & a:hover {
+        color: var(--color-text-Ani);
+      }
     }
     .side {
       display: flex;

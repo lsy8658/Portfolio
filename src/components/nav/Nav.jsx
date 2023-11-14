@@ -14,7 +14,9 @@ export default function Nav() {
     <div className="nav_container">
       <div className="navbar">
         <div className="container">
-          <div className="logo">SY Portfolio</div>
+          <div className="logo">
+            <Link to={"/"}>SY Portfolio</Link>
+          </div>
           <div className="side">
             <div className="menus">
               {routes.map((route) => (
