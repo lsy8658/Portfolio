@@ -6,7 +6,7 @@ import { SocketContextProvider } from "./context/SocketContextProvider";
 import { Provider } from "react-redux";
 import store from "./redux/store.js";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-// import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 const client = new QueryClient();
 
@@ -19,7 +19,7 @@ root.render(
           <App />
         </Provider>
         {/* </SocketContextProvider> */}
-        {/* <ReactQueryDevtools /> */}
+        <ReactQueryDevtools />
       </QueryClientProvider>
     </BrowserRouter>
   </React.StrictMode>

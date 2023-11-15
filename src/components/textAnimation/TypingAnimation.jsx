@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "./textAnimation.scss";
+import "./typingAnimation.scss";
 export default function TextAnimation(props) {
   const [aniText, setAniText] = useState("");
   const [count, setCount] = useState(0);

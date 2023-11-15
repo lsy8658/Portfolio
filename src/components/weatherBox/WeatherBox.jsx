@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { weatherForecastApi } from "../../api/weatherApi";
 import "./weatherbox.scss";
+import IsLoading from "../loading/IsLoading";
 export default function WeatherBox() {
   const [weather, setWeather] = useState();
   const [isLoading, setIsLoading] = useState(false);
@@ -11,13 +12,15 @@ export default function WeatherBox() {
         lat: position.coords.latitude,
         lon: position.coords.longitude,
       };
-      console.log(location);
       const fetchData = async () => {
         if (location) {
           try {
             setIsLoading(true);
             const result = await weatherForecastApi(location);
-            setIsLoading(false);
+            setTimeout(() => {
+              setIsLoading(false);
+            }, 1200);
+
             if (result) {
               setWeather(result);
             } else {
@@ -41,7 +44,7 @@ export default function WeatherBox() {
 
   return (
     <>
-      {isLoading && <div className="loading">isLoading..</div>}
+      {isLoading && <IsLoading />}
       {weather ? (
         <div className="weather_container">
           <div className="weather_wrap">

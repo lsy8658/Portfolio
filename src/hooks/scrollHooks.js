@@ -6,7 +6,7 @@ export const scrollHooks = () => {
     });
   };
 
-  const scrollAnimation = () => {};
+  // const scrollAnimation = () => {};
   return {
     scrollTop,
   };
