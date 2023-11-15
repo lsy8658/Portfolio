@@ -5,6 +5,7 @@ import Test from "../pages/test/Test";
 import About from "../pages/about/About";
 import Project from "../pages/project/Project";
 import Profile from "../pages/profile/Profile";
+import Board from "../pages/board/Board";
 
 export const routes = [
   {
@@ -26,6 +27,11 @@ export const routes = [
     path: "/about",
     id: "About",
     element: <About />,
+  },
+  {
+    path: "/board",
+    id: "Board",
+    element: <Board />,
   },
 ];
 

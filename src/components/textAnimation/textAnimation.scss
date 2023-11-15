@@ -25,20 +25,20 @@
 @include mobile-sm {
   .text_ani_container {
     .text {
-      font-size: 14px;
+      font-size: 20px;
     }
     .cursor {
-      font-size: 14px;
+      font-size: 20px;
     }
   }
 }
 @include mobile-md {
   .text_ani_container {
     .text {
-      font-size: 20px;
+      font-size: 30px;
     }
     .cursor {
-      font-size: 20px;
+      font-size: 30px;
     }
   }
 }

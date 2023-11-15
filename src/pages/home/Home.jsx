@@ -1,5 +1,5 @@
 import WeatherBox from "../../components/weatherBox/WeatherBox";
-import TextAnimation from "../../components/textAnimation/TextAnimation.jsx";
+import TextAnimation from "../../components/textAnimation/TypingAnimation.jsx";
 import "./home.scss";
 export default function Home() {
   return (

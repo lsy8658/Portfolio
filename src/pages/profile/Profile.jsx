@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import TextAnimation from "../../components/textAnimation/TextAnimation";
+import TextAnimation from "../../components/textAnimation/TypingAnimation";
 import "./profile.scss";
 export default function Profile() {
   return (
