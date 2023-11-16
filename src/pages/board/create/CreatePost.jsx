@@ -5,6 +5,7 @@ import { useState } from "react";
 import { boardApi } from "../../../api/boardApi";
 import IsLoading from "../../../components/loading/IsLoading";
 import { useQueryClient } from "@tanstack/react-query";
+import { Navigate } from "react-router-dom";
 export default function CreatePost() {
   const { postBoardApi } = boardApi();
   const navigate = useNavigate();
@@ -19,6 +20,11 @@ export default function CreatePost() {
   const { isLoading, mutate } = useMutation({
     mutationKey: ["postBoard"],
     mutationFn: postBoardApi,
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ["getBoard"] });
+
+      window.location.replace("/board");
+    },
   });
 
   if (isLoading) {
@@ -33,8 +39,6 @@ export default function CreatePost() {
     mutate({ name, desc });
 
     // queryClient.invalidateQueries(["getBoard"]);
-
-    navigate("/board");
   };
   return (
     <div className="section">

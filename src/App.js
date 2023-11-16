@@ -17,7 +17,7 @@ function App() {
       <ScrollTopButton />
       <MusicPlayer />
 
-      <div className="copyright">Copyright © LSY 2023. Nov.</div>
+      {/* <div className="copyright">Copyright © LSY 2023. Nov.</div> */}
     </div>
   );
 }

@@ -12,6 +12,7 @@ export default function Board() {
   const setNewArray = useSelector((state) => {
     return state.pagin.dataArray;
   });
+
   const { getBoardApi } = boardApi();
 
   const { data, isLoading } = useQuery({
