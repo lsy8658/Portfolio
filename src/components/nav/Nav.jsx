@@ -10,6 +10,9 @@ export default function Nav() {
   const mobileMenuHandle = () => {
     setMenus(!menus);
   };
+  const filterRoutes = routes.filter((route) => {
+    return route.id != "Viewer";
+  });
   return (
     <div className="nav_container">
       <div className="navbar">
@@ -19,7 +22,7 @@ export default function Nav() {
           </div>
           <div className="side">
             <div className="menus">
-              {routes.map((route) => (
+              {filterRoutes.map((route) => (
                 <Link key={route.id} to={route.path}>
                   {route.id}
                 </Link>
@@ -46,7 +49,7 @@ export default function Nav() {
       <div className={`mobile_navbar  ${menus && "open"}`}>
         {menus && (
           <div className="menus">
-            {routes.map((route) => (
+            {filterRoutes.map((route) => (
               <Link key={route.id} to={route.path} onClick={mobileMenuHandle}>
                 {route.id}
               </Link>

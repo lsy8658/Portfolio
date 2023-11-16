@@ -16,6 +16,8 @@ function App() {
       </div>
       <ScrollTopButton />
       <MusicPlayer />
+
+      <div className="footer">Copyright © LSY 2023. Nov.</div>
     </div>
   );
 }

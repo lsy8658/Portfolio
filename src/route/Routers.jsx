@@ -6,7 +6,7 @@ import About from "../pages/about/About";
 import Project from "../pages/project/Project";
 import Profile from "../pages/profile/Profile";
 import Board from "../pages/board/Board";
-
+import Viewer from "../pages/board/viewer/Viewer";
 export const routes = [
   {
     path: "/",
@@ -33,16 +33,23 @@ export const routes = [
     id: "Board",
     element: <Board />,
   },
+  {
+    path: "/viewer/:id",
+    id: "Viewer",
+    element: <Viewer />,
+  },
 ];
 
 export const Routers = () => {
   return (
     <Routes>
-      {routes.map((route) => (
-        <Route key={route.id} path={route.path} element={route.element}>
-          {route.path}
-        </Route>
-      ))}
+      {routes.map((route) => {
+        return (
+          <Route key={route.id} path={route.path} element={route.element}>
+            {route.path}
+          </Route>
+        );
+      })}
     </Routes>
   );
 };

@@ -23,9 +23,40 @@ body {
     padding-top: 59px;
     height: calc(100vh - 59px);
   }
+  .footer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--color-text);
+    font-size: 16px;
+    opacity: 0.7;
+    &:hover {
+      opacity: 1;
+    }
+  }
 }
 
 .main_container {
+}
+
+@include mobile-md {
+  .App {
+    .section {
+    }
+    .footer {
+      left: 70%;
+    }
+  }
+}
+@include md {
+  .App {
+    .section {
+    }
+    .footer {
+      left: 50%;
+    }
+  }
 }
 @include xl {
 }
