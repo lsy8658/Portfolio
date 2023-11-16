@@ -11,7 +11,7 @@ export default function Nav() {
     setMenus(!menus);
   };
   const filterRoutes = routes.filter((route) => {
-    return route.id != "Viewer";
+    return !route.sub;
   });
   return (
     <div className="nav_container">

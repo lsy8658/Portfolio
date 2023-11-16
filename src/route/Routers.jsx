@@ -7,6 +7,7 @@ import Project from "../pages/project/Project";
 import Profile from "../pages/profile/Profile";
 import Board from "../pages/board/Board";
 import Viewer from "../pages/board/viewer/Viewer";
+import CreatePost from "../pages/board/create/CreatePost";
 export const routes = [
   {
     path: "/",
@@ -36,7 +37,14 @@ export const routes = [
   {
     path: "/viewer/:id",
     id: "Viewer",
+    sub: true,
     element: <Viewer />,
+  },
+  {
+    path: "/createPost",
+    id: "CreatePost",
+    sub: true,
+    element: <CreatePost />,
   },
 ];
 

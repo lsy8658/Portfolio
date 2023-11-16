@@ -2,6 +2,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./viewer.scss";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+
 export default function Viewer() {
   const navigate = useNavigate();
   const params = useParams();
@@ -34,6 +35,7 @@ export default function Viewer() {
       setDateStr(dateStr);
     }
   }, [post]);
+
   const goBoard = () => {
     navigate("/board");
   };
