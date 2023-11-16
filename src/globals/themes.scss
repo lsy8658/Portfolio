@@ -7,6 +7,8 @@ $bg-color-1: #fff;
 $bg-color-2: #232323;
 $text-ani-1: #fedc45;
 $musicBox-1: #fedc45;
+$boardPost-1: #232323;
+$board-label-1: rgb(64, 158, 127);
 
 // dark mode
 $btn-darkmode-color-1: #fff;
@@ -15,6 +17,8 @@ $btn-darkmode-bg-color-1: #232323;
 $btn-darkmode-bg-color-2: #fff;
 $text-ani-2: #232323;
 $musicBox-2: #575656;
+$boardPost-2: #575656;
+$board-label-2: #ff7e7e;
 
 html[color-theme="light"] {
   --color-text: #{$text-color-1};
@@ -29,6 +33,10 @@ html[color-theme="light"] {
   --color-text-Ani: #{$text-ani-2};
 
   --color-music-Box: #{$musicBox-2};
+
+  --color-board: #{$boardPost-1};
+
+  --color-board-label: #{$board-label-1};
 }
 
 html[color-theme="dark"] {
@@ -44,4 +52,8 @@ html[color-theme="dark"] {
   --color-text-Ani: #{$text-ani-1};
 
   --color-music-Box: #{$musicBox-1};
+
+  --color-board: #{$boardPost-2};
+
+  --color-board-label: #{$board-label-2};
 }

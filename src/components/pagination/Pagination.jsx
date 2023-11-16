@@ -1,5 +1,8 @@
+import "./pagination.scss";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
+import { MdNavigateNext } from "react-icons/md";
+import { GrFormPrevious } from "react-icons/gr";
 import { setNewArray } from "../../redux/reducers/paginationReducer";
 export default function Pagination(props) {
   const dispatch = useDispatch();
@@ -35,26 +38,40 @@ export default function Pagination(props) {
   };
 
   return (
-    <div>
-      <div>
-        <button onClick={prevPagin}>prev</button>
+    <div className="pagination_container">
+      <button className="pagin_button direction" onClick={prevPagin}>
+        <GrFormPrevious />
+        {/* TODO= prev 버튼이 색상이 안변함 */}
+      </button>
+
+      <div className="btns">
+        {paginationCount &&
+          Array(paginationCount)
+            .fill()
+            .map((_, index) => {
+              if (currentNum - 2 < index + 1 && currentNum + 2 > index + 1) {
+                return (
+                  <button
+                    className={`pagin_button ${
+                      index === currentNum - 1 ? "active" : ""
+                    }`}
+                    key={index}
+                    onClick={() => {
+                      paginHandle(index);
+                    }}
+                  >
+                    {index + 1}
+                  </button>
+                );
+              } else {
+                return <span className="dot">.</span>;
+              }
+            })}
       </div>
-      {paginationCount &&
-        Array(paginationCount)
-          .fill()
-          .map((_, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                paginHandle(index);
-              }}
-            >
-              {index + 1}
-            </button>
-          ))}
-      <div>
-        <button onClick={nextPagin}>next</button>
-      </div>
+
+      <button className="pagin_button direction" onClick={nextPagin}>
+        <MdNavigateNext />
+      </button>
     </div>
   );
 }

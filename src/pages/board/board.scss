@@ -1,0 +1,148 @@
+@import "../../globals/mixin.scss";
+.section {
+  .board_container {
+    padding-top: 50px;
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1048px;
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera*/
+    }
+    .post_box {
+      box-sizing: border-box;
+      padding-top: 20px;
+
+      .post {
+        display: flex;
+        gap: 10px;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        border-radius: 8px;
+        color: var(--color-text);
+        border: 2px solid var(--color-board);
+        cursor: pointer;
+
+        &:hover {
+          color: var(--color-diff-text);
+          background: var(--color-diff--background);
+        }
+        .name {
+          flex: 1;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          text-align: right;
+        }
+        .desc {
+          flex: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+
+  .createBtn {
+    position: absolute;
+    right: 10%;
+    bottom: 150px;
+    padding: 5px 10px;
+    color: var(--color-diff-text);
+    background: var(--color-diff--background);
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      color: #857c7c;
+    }
+  }
+}
+
+@include mobile-sm {
+  .board_container {
+    max-height: 300px;
+    .post_box {
+      .post {
+        .name {
+          font-size: 16px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile-md {
+  .board_container {
+    max-height: 300px;
+    .post_box {
+      .post {
+        .name {
+          font-size: 16px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include sm {
+  .board_container {
+    max-height: 500px;
+    .post_box {
+      .post {
+        .name {
+          font-size: 16px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include md {
+  .board_container {
+    max-height: 500px;
+    .post_box {
+      .post {
+        .name {
+          font-size: 16px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@include lg {
+  .board_container {
+    max-height: 550px;
+    .post_box {
+      .post {
+        .name {
+          font-size: 16px;
+        }
+        .desc {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

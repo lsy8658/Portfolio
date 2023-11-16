@@ -23,7 +23,7 @@ export default function Board() {
   }
 
   const viewPost = (id) => {
-    navigate(`/viewer/:${id}`);
+    navigate(`/viewer/${id}`);
   };
 
   return (
@@ -31,19 +31,22 @@ export default function Board() {
       <div className="board_container">
         {setNewArray &&
           setNewArray.map((post, index) => (
-            <p key={post._id}>
-              <span
+            <div className="post_box" key={post._id}>
+              <div
+                className="post"
                 onClick={() => {
                   viewPost(post._id);
                 }}
               >
-                {post.title}
-              </span>
-              {post.desc}
-            </p>
+                <p className="desc">{post.desc}</p>
+                <p className="name">{post.name}</p>
+              </div>
+            </div>
           ))}
       </div>
-      {data && <Pagination data={data} viewCount={3} />}
+      {data && <Pagination data={data} viewCount={8} />}
+
+      <button className="createBtn">글쓰기</button>
     </div>
   );
 }

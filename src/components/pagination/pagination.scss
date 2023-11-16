@@ -1,0 +1,42 @@
+@import "../../globals/mixin.scss";
+
+.pagination_container {
+  position: absolute;
+  left: 0;
+  bottom: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 100%;
+  .btns {
+    display: flex;
+    gap: 5px;
+  }
+  .dot {
+    padding-top: 4px;
+    color: var(--color-text);
+  }
+  .pagin_button {
+    background: var(--color-diff--background);
+    color: var(--color-diff-text);
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    &.active {
+      background: #6e6a6a;
+    }
+    &:hover {
+      background: #6e6a6a;
+    }
+    &.direction {
+      color: var(--color-diff-text);
+      font-size: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
