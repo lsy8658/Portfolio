@@ -23,7 +23,8 @@ export default function CreatePost() {
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["getBoard"] });
 
-      window.location.replace("/board");
+      // window.location.replace("/board"); // TODO= 사이트 이동에 문제있음
+      navigate("/board");
     },
   });
 
