@@ -82,6 +82,7 @@
 @include mobile-sm {
   .section {
     .create_post_container {
+      top: 50%;
       .form {
         .name {
         }
@@ -107,6 +108,7 @@
 @include md {
   .section {
     .create_post_container {
+      top: 47%;
       .form {
         .name {
         }

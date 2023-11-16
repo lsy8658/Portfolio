@@ -47,18 +47,18 @@ export default function CreatePost() {
           />
           <textarea
             placeholder="내용을 입력해 주세요."
-            rows="5"
+            rows="7"
             type="text"
             className="desc"
             onChange={(e) => setDesc(e.target.value)}
           />
         </form>
         <div className="board_btns">
-          <div className="board_btn" onClick={create}>
-            작성하기
-          </div>
           <div className="board_btn" onClick={goBoard}>
             돌아가기
+          </div>
+          <div className="board_btn" onClick={create}>
+            작성하기
           </div>
         </div>
       </div>
