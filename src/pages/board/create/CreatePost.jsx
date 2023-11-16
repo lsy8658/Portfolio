@@ -20,12 +20,6 @@ export default function CreatePost() {
   const { isLoading, mutate } = useMutation({
     mutationKey: ["postBoard"],
     mutationFn: postBoardApi,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["getBoard"] });
-
-      // window.location.replace("/board"); // TODO= 사이트 이동에 문제있음
-      navigate("/board");
-    },
   });
 
   if (isLoading) {
@@ -53,7 +47,7 @@ export default function CreatePost() {
           />
           <textarea
             placeholder="내용을 입력해 주세요."
-            rows="7"
+            rows="5"
             type="text"
             className="desc"
             onChange={(e) => setDesc(e.target.value)}
