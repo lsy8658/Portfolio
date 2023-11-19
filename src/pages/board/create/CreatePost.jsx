@@ -5,12 +5,12 @@ import { useState } from "react";
 import { boardApi } from "../../../api/boardApi";
 import IsLoading from "../../../components/loading/IsLoading";
 import { useQueryClient } from "@tanstack/react-query";
-import { Navigate } from "react-router-dom";
+
 export default function CreatePost() {
   const { postBoardApi } = boardApi();
   const navigate = useNavigate();
-  const [name, setName] = useState();
-  const [desc, setDesc] = useState();
+  const [name, setName] = useState("");
+  const [desc, setDesc] = useState("");
   const queryClient = useQueryClient();
 
   const goBoard = () => {
@@ -20,6 +20,9 @@ export default function CreatePost() {
   const { isLoading, mutate } = useMutation({
     mutationKey: ["postBoard"],
     mutationFn: postBoardApi,
+    onSuccess: () => {
+      queryClient.invalidateQueries(["getBoard"]);
+    },
   });
 
   if (isLoading) {
@@ -27,11 +30,13 @@ export default function CreatePost() {
   }
 
   const create = () => {
-    if (name.length < 0 || desc.length < 0) return;
-    console.log("name =>", name);
-    console.log("desc =>", desc);
-
-    mutate({ name, desc });
+    if (name === "" || desc === "") {
+      alert("내용을 모두 입력해 주세요.");
+      return;
+    } else {
+      mutate({ name, desc });
+      goBoard();
+    }
 
     // queryClient.invalidateQueries(["getBoard"]);
   };

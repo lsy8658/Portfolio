@@ -18,7 +18,7 @@ export default function Pagination(props) {
     let end = viewCount * currentNum;
     newDataArray = data.slice(start, end);
     dispatch(setNewArray(newDataArray));
-  }, [currentNum]);
+  }, [data, currentNum]);
 
   /* pagination button click */
   const paginHandle = (index) => {
@@ -64,7 +64,11 @@ export default function Pagination(props) {
                   </button>
                 );
               } else {
-                return <span className="dot">.</span>;
+                return (
+                  <span className="dot" key={index}>
+                    .
+                  </span>
+                );
               }
             })}
       </div>

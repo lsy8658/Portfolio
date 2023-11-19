@@ -11,8 +11,11 @@ export const paginationSlice = createSlice({
     setNewArray: (state, action) => {
       state.dataArray = action.payload;
     },
+    boardReset: (state) => {
+      state.dataArray = [];
+    },
   },
 });
 
-export const { setNewArray, reset } = paginationSlice.actions;
+export const { setNewArray, boardReset } = paginationSlice.actions;
 export default paginationSlice.reducer;
