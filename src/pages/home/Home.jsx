@@ -1,6 +1,7 @@
 import WeatherBox from "../../components/weatherBox/WeatherBox";
 import TextAnimation from "../../components/textAnimation/TypingAnimation.jsx";
 import "./home.scss";
+import MusicPlayer from "../../components/musicplayer/MusicPlayer.jsx";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </div>
       <p className="sub_txt">이성윤입니다.</p>
       <WeatherBox />
+      <MusicPlayer />
     </div>
   );
 }
