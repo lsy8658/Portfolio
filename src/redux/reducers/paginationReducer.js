@@ -14,5 +14,5 @@ export const paginationSlice = createSlice({
   },
 });
 
-export const { setNewArray } = paginationSlice.actions;
+export const { setNewArray, reset } = paginationSlice.actions;
 export default paginationSlice.reducer;

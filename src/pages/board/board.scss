@@ -1,9 +1,8 @@
 @import "../../globals/mixin.scss";
 .section {
   .board_container {
-    padding-top: 50px;
     width: 80%;
-    margin: 0 auto;
+    margin: 50px auto;
     max-width: 1048px;
     overflow: hidden;
     overflow-y: scroll;

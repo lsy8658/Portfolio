@@ -5,7 +5,6 @@ import IsLoading from "../../components/loading/IsLoading";
 import Pagination from "../../components/pagination/Pagination";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 export default function Board() {
   const navigate = useNavigate();

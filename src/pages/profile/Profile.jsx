@@ -1,6 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
 import TextAnimation from "../../components/textAnimation/TypingAnimation";
 import "./profile.scss";
+
 export default function Profile() {
   return (
     <>
@@ -19,6 +19,7 @@ export default function Profile() {
           <p>🎓 백석 예술대학교 졸업</p>
         </div>
       </div>
+
       {/* <div className="profile_section">
         <h2 className="title">📝Skills</h2>
         <div className="skills"></div>
