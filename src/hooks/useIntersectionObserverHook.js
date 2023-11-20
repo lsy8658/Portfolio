@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 
 const useIntersectionObserverHook = (targetRef, observerFnc, observerOt) => {
   useEffect(() => {
@@ -19,9 +19,9 @@ const useIntersectionObserverHook = (targetRef, observerFnc, observerOt) => {
 };
 
 export default useIntersectionObserverHook;
+// https://www.youtube.com/watch?v=WFw_SgVlXUY&t=52s
 /*
   options
-
     root: null,
     rootMargin: "0px",
     threshold: 0.4,
