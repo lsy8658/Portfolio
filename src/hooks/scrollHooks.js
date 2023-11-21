@@ -5,9 +5,14 @@ export const scrollHooks = () => {
       behavior: "smooth",
     });
   };
+  const elemScrollTop = (elem) => {
+    if (elem.current) {
+      elem.current.scrollTop = 0;
+    }
+  };
 
-  // const scrollAnimation = () => {};
   return {
     scrollTop,
+    elemScrollTop,
   };
 };

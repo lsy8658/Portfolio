@@ -5,12 +5,19 @@ import IsLoading from "../../components/loading/IsLoading";
 import Pagination from "../../components/pagination/Pagination";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-
+import { useEffect, useRef } from "react";
+import { scrollHooks } from "../../hooks/scrollHooks";
 export default function Board() {
+  const { elemScrollTop } = scrollHooks();
   const navigate = useNavigate();
+  const boardContainerRef = useRef();
   const setNewArray = useSelector((state) => {
     return state.pagin.dataArray;
   });
+
+  useEffect(() => {
+    elemScrollTop(boardContainerRef);
+  }, [setNewArray]);
 
   const { getBoardApi } = boardApi();
 
@@ -29,7 +36,7 @@ export default function Board() {
 
   return (
     <div className="section">
-      <div className="board_container">
+      <div className="board_container" ref={boardContainerRef}>
         {setNewArray &&
           setNewArray.map((post, index) => (
             <div className="post_box" key={post._id}>
@@ -58,8 +65,3 @@ export default function Board() {
     </div>
   );
 }
-
-/*
-  1. 페이지 네이션 구현하기
-  2. 데이터 전송 create
-*/
