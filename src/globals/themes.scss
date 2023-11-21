@@ -9,6 +9,8 @@ $text-ani-1: #fedc45;
 $musicBox-1: #fedc45;
 $boardPost-1: #232323;
 $board-label-1: rgb(64, 158, 127);
+$box-shadow-project-light1: rgba(50, 50, 93, 0.25);
+$box-shadow-project-light2: rgba(0, 0, 0, 0.3);
 
 // dark mode
 $btn-darkmode-color-1: #fff;
@@ -19,6 +21,8 @@ $text-ani-2: #232323;
 $musicBox-2: #575656;
 $boardPost-2: #575656;
 $board-label-2: #ff7e7e;
+$box-shadow-project-dark1: rgba(208, 208, 212, 0.25);
+$box-shadow-project-dark2: rgba(184, 181, 181, 0.3);
 
 html[color-theme="light"] {
   --color-text: #{$text-color-1};
@@ -37,6 +41,9 @@ html[color-theme="light"] {
   --color-board: #{$boardPost-1};
 
   --color-board-label: #{$board-label-1};
+
+  --box-shadow-project1: #{$box-shadow-project-light1};
+  --box-shadow-project2: #{$box-shadow-project-light2};
 }
 
 html[color-theme="dark"] {
@@ -56,4 +63,7 @@ html[color-theme="dark"] {
   --color-board: #{$boardPost-2};
 
   --color-board-label: #{$board-label-2};
+
+  --box-shadow-project1: #{$box-shadow-project-dark1};
+  --box-shadow-project2: #{$box-shadow-project-dark2};
 }

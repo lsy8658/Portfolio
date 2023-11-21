@@ -15,6 +15,7 @@
   }
   .info {
     padding-top: 50px;
+    animation: textOpacityAni 1.5s ease;
     p {
       color: var(--color-text);
       font-size: 18px;
@@ -26,6 +27,24 @@
     color: var(--color-text);
     p {
       padding: 5px 0;
+
+      &:nth-child(1) {
+        animation: textOpacityAni 2.5s ease;
+      }
+      &:nth-child(2) {
+        animation: textOpacityAni 3s ease;
+      }
+      &:nth-child(3) {
+        animation: textOpacityAni 3.5s ease;
+      }
+    }
+  }
+  @keyframes textOpacityAni {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
   }
   //   .skills {

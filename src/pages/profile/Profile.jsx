@@ -5,7 +5,7 @@ export default function Profile() {
   return (
     <>
       <div className="profile_section">
-        <h2 className="title">🙂Profile</h2>
+        <h2 className="title">Profile</h2>
         <div className="profile_text_wrap">
           <TextAnimation text={"Sung yoon | Front-end"} time={100} />
         </div>
@@ -17,6 +17,7 @@ export default function Profile() {
         <div className="my_history">
           <p>🏫 한성 고등학교 졸업</p>
           <p>🎓 백석 예술대학교 졸업</p>
+          <p>📬 dltjddbs8658@naver.com</p>
         </div>
       </div>
 

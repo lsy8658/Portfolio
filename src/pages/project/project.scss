@@ -1,0 +1,72 @@
+@import "../../globals/mixin.scss";
+
+.project_section {
+  padding-top: 59px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1048px;
+
+  .title {
+    padding: 50px 0 100px;
+    color: var(--color-text);
+    font-size: 28px;
+  }
+  .project_item:nth-of-type(even) {
+    flex-direction: row-reverse;
+    .project_info {
+      box-sizing: border-box;
+      padding-left: 10%;
+    }
+  }
+}
+@include mobile-sm {
+  .project_section {
+    padding-top: 59px;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1048px;
+
+    .title {
+      padding: 50px 0 100px;
+      color: var(--color-text);
+      font-size: 28px;
+    }
+    .project_item {
+      flex-direction: column;
+      &:nth-of-type(even) {
+        flex-direction: column;
+
+        .project_info {
+          box-sizing: border-box;
+          padding-left: 0%;
+        }
+      }
+    }
+  }
+}
+@include mobile-md {
+}
+@include md {
+  .project_section {
+    padding-top: 59px;
+    width: 95%;
+    margin: 0 auto;
+    max-width: 1048px;
+
+    .title {
+      padding: 50px 0 100px;
+      color: var(--color-text);
+      font-size: 28px;
+    }
+    .project_item {
+      flex-direction: row;
+      &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        .project_info {
+          box-sizing: border-box;
+          padding-left: 10%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+@import "../../globals/mixin.scss";
+.project_item {
+  position: relative;
+  display: flex;
+  width: 100%;
+  color: var(--color-text);
+  height: 600px;
+  padding-bottom: 60px;
+  & > div {
+    flex: 1;
+  }
+  .project_info {
+    transition: ease 0.7s;
+    margin-top: 200px;
+    opacity: 0;
+    &.active {
+      margin-top: 0px;
+      opacity: 1;
+    }
+    .title {
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom: 20px;
+      color: var(--color-text-Ani);
+    }
+    .dev {
+      font-size: 20px;
+      padding-top: 0;
+      padding-bottom: 20px;
+      color: #868585;
+    }
+    .info {
+      width: 80%;
+      font-size: 34px;
+      color: var(--color-text);
+    }
+  }
+  .project_view {
+    position: sticky;
+    top: 59px;
+    border-radius: 18px;
+    box-sizing: border-box;
+    padding: 13px;
+    height: 300px;
+    max-width: 500px;
+    background: var(--color-diff--background);
+    box-shadow: var(--box-shadow-project1) 0px 50px 100px -20px,
+      var(--box-shadow-project2) 0px 30px 60px -30px;
+
+    img {
+      border-radius: 18px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .line {
+    width: 0%;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    height: 1px;
+    background: #868585;
+    transition: ease 3s;
+    &.active {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile-sm {
+  .project_item {
+    height: 400px;
+    & > div {
+    }
+    .project_info {
+      margin-top: 0px;
+      &.active {
+      }
+      .title {
+      }
+      .dev {
+      }
+      .info {
+        width: 90%;
+        font-size: 20px;
+      }
+    }
+    .project_view {
+      height: 200px;
+      img {
+      }
+      .line {
+      }
+    }
+  }
+}
+@include mobile-md {
+  .project_item {
+    height: 500px;
+    & > div {
+    }
+    .project_info {
+      &.active {
+      }
+      .title {
+      }
+      .dev {
+      }
+      .info {
+        width: 90%;
+        font-size: 20px;
+      }
+    }
+    .project_view {
+      height: 300px;
+      img {
+      }
+      .line {
+      }
+    }
+  }
+}
+@include md {
+  .project_item {
+    height: 600px;
+    & > div {
+    }
+    .project_info {
+      margin-top: 200px;
+      opacity: 0;
+
+      &.active {
+        margin-top: 0px;
+      }
+      .title {
+      }
+      .dev {
+      }
+      .info {
+        width: 80%;
+        font-size: 34px;
+      }
+    }
+    .project_view {
+      img {
+      }
+      .line {
+      }
+    }
+  }
+}

@@ -1,21 +1,38 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
-const useIntersectionObserverHook = (targetRef, observerFnc, observerOt) => {
+const useIntersectionObserverHook = (targetRef) => {
+  const [isInViewport, setIsInViewport] = useState(false);
+  const observer = useRef();
+
   useEffect(() => {
-    let observer;
-
-    if (targetRef.current) {
-      observer = new IntersectionObserver((entries) => {
+    if (!observer.current) {
+      const observerCallback = (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
+            setIsInViewport(true);
+          } else {
+            setIsInViewport(false);
           }
         });
-      }, observerOt);
+      };
+
+      observer.current = new window.IntersectionObserver(observerCallback, {
+        threshold: 0.3,
+      });
     }
-    observer.observe(targetRef.current);
-    return () => observer.current && observer.current.disconnect();
+
+    if (targetRef.current) {
+      observer.current.observe(targetRef.current);
+    }
+
+    return () => {
+      if (observer.current) {
+        observer.current.disconnect();
+      }
+    };
   }, [targetRef]);
-  return <div>useIntersectionObserverHook</div>;
+
+  return isInViewport;
 };
 
 export default useIntersectionObserverHook;
