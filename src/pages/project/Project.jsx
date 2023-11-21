@@ -1,7 +1,7 @@
 import "./project.scss";
 import ProjectItem from "../../components/projectItem/ProjectItem";
 import { useRef } from "react";
-
+import ScrollTopButton from "../../components/scrollTopButton/ScrollTopButton";
 export default function Project() {
   const containerRef1 = useRef();
   const infoRef1 = useRef();
@@ -59,6 +59,7 @@ export default function Project() {
           img={item.img}
         />
       ))}
+      <ScrollTopButton />
     </div>
   );
 }
