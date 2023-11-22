@@ -5,6 +5,7 @@
   width: 100%;
   color: var(--color-text);
   height: 600px;
+
   padding-bottom: 60px;
   & > div {
     flex: 1;
@@ -71,6 +72,7 @@
 @include mobile-sm {
   .project_item {
     height: 400px;
+    padding-top: 100px;
     & > div {
     }
     .project_info {
@@ -124,12 +126,15 @@
 @include md {
   .project_item {
     height: 600px;
+    padding-top: 0px;
+
     & > div {
     }
     .project_info {
       margin-top: 200px;
       opacity: 0;
-
+      display: flex;
+      align-items: center;
       &.active {
         margin-top: 0px;
       }
