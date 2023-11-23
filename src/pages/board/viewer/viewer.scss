@@ -47,7 +47,8 @@
 }
 .backBtn {
   position: absolute;
-  right: 10%;
+  left: 50%;
+  transform: translateX(-50%);
   bottom: 130px;
   padding: 5px 10px;
   color: var(--color-diff-text);

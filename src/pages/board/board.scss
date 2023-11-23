@@ -50,14 +50,15 @@
 
   .createBtn {
     position: absolute;
-    right: 10%;
-    bottom: 110px;
-    padding: 5px 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px 19px;
+    font-size: 19px;
     color: var(--color-diff-text);
     background: var(--color-diff--background);
     border: none;
     border-radius: 5px;
-    font-size: 16px;
+
     cursor: pointer;
 
     &:hover {
