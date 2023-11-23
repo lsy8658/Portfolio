@@ -3,9 +3,9 @@
 .profile_section {
   padding-top: 59px;
   width: 95%;
+
   margin: 0 auto;
   max-width: 1048px;
-  height: 100vh;
   .title {
     padding: 50px 0;
     color: var(--color-text);
@@ -39,6 +39,7 @@
       }
     }
   }
+
   @keyframes textOpacityAni {
     from {
       opacity: 0;
@@ -65,14 +66,96 @@
     }
     .info {
       p {
+        font-size: 17px;
       }
     }
     .my_history {
       p {
+        font-size: 17px;
+      }
+    }
+  }
+  .company_container {
+    padding-top: 50px;
+
+    .title {
+      color: var(--color-diff-text);
+      font-size: 20px;
+      span {
+        font-size: 12px;
+        color: #868585;
+      }
+      p {
+        padding-top: 10px;
+        color: var(--color-diff-text);
+      }
+    }
+    .company {
+      background: var(--color-diff--background);
+      color: var(--color-diff-text);
+      border-radius: 13px;
+      box-sizing: border-box;
+      padding: 15px;
+      &:first-child {
+        margin-bottom: 30px;
+      }
+      .projects {
+        position: relative;
+        width: 90%;
+
+        .main {
+          p {
+          }
+          button {
+            display: none;
+          }
+        }
+        .project {
+          padding-top: 15px;
+          font-size: 14px;
+          line-height: 20px;
+          .project_name {
+            font-weight: bold;
+          }
+          .process {
+            padding-top: 10px;
+            p {
+              padding-top: 10px;
+            }
+          }
+          &:nth-child(2) {
+          }
+          &:nth-child(3) {
+          }
+          &:nth-child(4) {
+          }
+          &:nth-child(5) {
+          }
+        }
+        &.active {
+        }
+        .project:nth-child(3) {
+        }
+        .project:nth-child(4) {
+        }
+        .project:nth-child(5) {
+        }
+      }
+      &.only {
+        .projects {
+          // color: var(--color-text);
+          height: 200px;
+          width: 100%;
+          p {
+            padding-top: 15px;
+            font-size: 16px;
+          }
+        }
       }
     }
   }
 }
+
 @include mobile-md {
   .profile_section {
     .title {
@@ -105,6 +188,153 @@
     .my_history {
       p {
         font-size: 17px;
+      }
+    }
+  }
+  .company_container {
+    padding-top: 50px;
+    background: var(--color--background);
+
+    .title {
+      color: var(--color-text);
+      span {
+        font-size: 16px;
+        color: #868585;
+      }
+      p {
+        padding-top: 10px;
+        font-size: 16px;
+        color: var(--color-text);
+      }
+    }
+    .company {
+      color: #000;
+      border-radius: 13px;
+      background: none;
+      .projects {
+        position: relative;
+        width: 300px;
+        height: 500px;
+
+        .main {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          z-index: 999;
+          color: var(--color-diff-text);
+          background: var(--color-diff--background);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          box-sizing: border-box;
+          p {
+            text-align: center;
+            padding-bottom: 20px;
+          }
+          button {
+            display: block;
+            outline: none;
+            border: none;
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            border-radius: 16px;
+            font-size: 20px;
+            color: var(--color-text);
+            background: var(--color-background);
+            &:hover {
+              background: #868585;
+            }
+          }
+        }
+        .project {
+          width: 300px;
+          height: 250px;
+          position: absolute;
+          font-size: 14px;
+          z-index: 9;
+          display: flex;
+          flex-direction: column;
+
+          box-sizing: border-box;
+          padding: 10px 15px;
+          .project_name {
+            font-weight: bold;
+          }
+          .process {
+            padding-top: 10px;
+            p {
+              padding-top: 10px;
+              line-height: 16px;
+            }
+          }
+          &:nth-child(2) {
+            top: 0;
+            left: 0;
+            background: #ccc;
+            transition: ease 1.7s;
+            z-index: 10;
+          }
+          &:nth-child(3) {
+            top: 0;
+            left: 0;
+            background: #885e5e;
+            transition: ease 1.5s;
+          }
+          &:nth-child(4) {
+            top: 250px;
+            left: 0;
+            background: #4b3a3a;
+            transition: ease 1.3s;
+            z-index: 10;
+          }
+          &:nth-child(5) {
+            top: 250px;
+            left: 0;
+            background: #eecbcb;
+            transition: ease 1s;
+          }
+        }
+        &.active {
+          .project:nth-child(2) {
+            top: 0;
+            left: 300px;
+            background: #ccc;
+            transition: ease-in 1s;
+          }
+          .project:nth-child(3) {
+            top: 0;
+            left: 600px;
+            background: rgb(211, 202, 202);
+            transition: ease-in 1.5s;
+          }
+          .project:nth-child(4) {
+            top: 250px;
+            left: 300px;
+            background: #8b8787;
+            transition: ease-in 1.3s;
+          }
+          .project:nth-child(5) {
+            top: 250px;
+            left: 600px;
+            background: #5c5a5a;
+            transition: ease-in 1.7s;
+          }
+        }
+      }
+      &.only {
+        .projects {
+          color: var(--color-text);
+          height: 200px;
+          width: 100%;
+          p {
+            padding-top: 15px;
+            font-size: 18px;
+          }
+        }
       }
     }
   }
