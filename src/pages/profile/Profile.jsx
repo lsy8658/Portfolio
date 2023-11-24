@@ -1,7 +1,7 @@
 import { useState } from "react";
 import TextAnimation from "../../components/textAnimation/TypingAnimation";
 import "./profile.scss";
-
+import ScrollTopButton from "../../components/scrollTopButton/ScrollTopButton";
 export default function Profile() {
   const [showInfo, setShowInfo] = useState(false);
   const showInfoHandel = () => {
@@ -121,6 +121,7 @@ export default function Profile() {
           </div>
         </div>
       </div>
+      <ScrollTopButton />
     </>
   );
 }
