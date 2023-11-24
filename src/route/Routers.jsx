@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home";
 import ChatTest from "../pages/chatTest/ChatTest";
 import Test from "../pages/test/Test";
-import About from "../pages/about/About";
+import Contacts from "../pages/contacts/Contacts";
 import Project from "../pages/project/Project";
 import Profile from "../pages/profile/Profile";
 import Board from "../pages/board/Board";
@@ -24,15 +24,16 @@ export const routes = [
     id: "Project",
     element: <Project />,
   },
-  {
-    path: "/about",
-    id: "About",
-    element: <About />,
-  },
+
   {
     path: "/board",
     id: "Board",
     element: <Board />,
+  },
+  {
+    path: "/contacts",
+    id: "Contacts",
+    element: <Contacts />,
   },
   {
     path: "/viewer/:id",

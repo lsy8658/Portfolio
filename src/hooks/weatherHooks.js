@@ -35,6 +35,11 @@ export const weatherHook = (data) => {
         text: "맑은 하늘 (Clear)",
         imgSrc: "assets/images/clear.jpg",
       };
+    } else if (801 === id) {
+      state = {
+        text: "약간의 구름이 낀 하늘 (Clouds)",
+        imgSrc: "assets/images/clouds_sun1.png",
+      };
     } else if (id < 900) {
       state = {
         text: "구름 (Clouds)",

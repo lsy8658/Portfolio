@@ -1,0 +1,68 @@
+@import "../../globals/mixin.scss";
+
+.section {
+  padding-top: 59px;
+  width: 95%;
+  margin: 0 auto;
+  max-width: 1048px;
+  .links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding-top: 180px;
+    .link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--color-text);
+      font-size: 30px;
+      .icon {
+        display: flex;
+        align-items: flex-end;
+      }
+      &:hover {
+        color: #868585;
+      }
+      &:hover .icon {
+        animation: iconAni ease 0.5s infinite alternate;
+      }
+      cursor: pointer;
+    }
+  }
+}
+@keyframes iconAni {
+  from {
+    transform: perspective(800px) rotateY(0deg);
+  }
+  to {
+    transform: perspective(800px) rotateY(160deg);
+  }
+}
+@include mobile-sm {
+  .section {
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 50px;
+      .link {
+      }
+    }
+  }
+}
+@include md {
+  .section {
+    .links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      padding-top: 350px;
+      gap: 100px;
+      .link {
+      }
+    }
+  }
+}
