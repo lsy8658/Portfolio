@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="section">
       <div className="home_text_wrap">
-        <TextAnimation text={"Frontend Developer"} time={200} />
+        <TextAnimation text={"Front-end Developer"} time={200} />
       </div>
       <p className="sub_txt">LEE SUNG YOON</p>
       <WeatherBox />
