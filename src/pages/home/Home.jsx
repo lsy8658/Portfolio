@@ -9,7 +9,7 @@ export default function Home() {
       <div className="home_text_wrap">
         <TextAnimation text={"Frontend Developer"} time={200} />
       </div>
-      <p className="sub_txt">이성윤입니다.</p>
+      <p className="sub_txt">LEE SUNG YOON</p>
       <WeatherBox />
       <MusicPlayer />
     </div>
