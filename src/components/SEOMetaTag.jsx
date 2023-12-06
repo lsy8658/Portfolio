@@ -21,7 +21,8 @@ const MetaTag = () => {
 
       <meta property="og:site_name" content="이성윤 포트폴리오" />
       <meta property="og:title" content="이성윤 포트폴리오" />
-      <meta property="og:image" content="./favicon.png" />
+      <meta property="og:url" content="https://lsy-portfolio.netlify.app" />
+      <meta property="og:image" content="/favicon.png" />
       <meta property="og:type" content="website" data-rh="true" />
       <meta
         property="og:description"
@@ -29,14 +30,10 @@ const MetaTag = () => {
       />
       <meta
         name="keywords"
-        content="프론트엔드, 웹개발, lsy, portfolio, 프론트엔드 포트폴리오, 이성윤"
+        content="프론트엔드, 웹개발, lsy-portfolio, lsy, portfolio, 개발자, 프론트엔드 포트폴리오, 이성윤"
       />
-      <meta property="og:url" content="https://lsy-portfolio.netlify.app/" />
-      <meta name="twitter:title" content="이성윤 포트폴리오" />
-      <meta
-        name="twitter:description"
-        content="프론트엔드 개발자 이성윤의 포트폴리오입니다."
-      />
+
+      <meta name="subject" content="포트폴리오" />
     </Helmet>
   );
 };
