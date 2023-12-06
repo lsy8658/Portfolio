@@ -5,17 +5,20 @@ import "./globals/themes.scss";
 import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 import MusicPlayer from "./components/musicplayer/MusicPlayer";
-
+import SEOMetaTag from "./components/SEOMetaTag";
 function App() {
   return (
-    <div className="App">
-      <Nav />
-      <div className="main_container">
-        <Routers />
-      </div>
+    <>
+      <SEOMetaTag />
+      <div className="App">
+        <Nav />
+        <div className="main_container">
+          <Routers />
+        </div>
 
-      {/* <div className="copyright">Copyright © LSY 2023. Nov.</div> */}
-    </div>
+        {/* <div className="copyright">Copyright © LSY 2023. Nov.</div> */}
+      </div>
+    </>
   );
 }
 
