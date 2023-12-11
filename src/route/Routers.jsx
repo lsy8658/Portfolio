@@ -25,11 +25,11 @@ export const routes = [
     element: <Project />,
   },
 
-  {
-    path: "/board",
-    id: "Board",
-    element: <Board />,
-  },
+  // {
+  //   path: "/board",
+  //   id: "Board",
+  //   element: <Board />,
+  // },
   {
     path: "/contacts",
     id: "Contacts",
