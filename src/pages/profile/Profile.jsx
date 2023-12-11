@@ -3,7 +3,7 @@ import TextAnimation from "../../components/textAnimation/TypingAnimation";
 import "./profile.scss";
 import ScrollTopButton from "../../components/scrollTopButton/ScrollTopButton";
 export default function Profile() {
-  const [showInfo, setShowInfo] = useState(false);
+  const [showInfo, setShowInfo] = useState(true);
   const showInfoHandel = () => {
     setShowInfo(!showInfo);
   };
@@ -67,12 +67,11 @@ export default function Profile() {
                 <div className="process">
                   <p>1. 개발환경 - Vue3, Typescript, Pinia, javascript</p>
                   <p>
-                    2. 수행 업무 및 역할 - 개선 및 솔루션 제안 - 디자인 작업물에
-                    대한 Vue.js SPA 개발 - 실시간으로 드론의 Telemetry를 받아
-                    위치 표시 및 각 구역 ( 금지 구역 , 장애물 구역 등 ) CRUD
-                    작업 ( google map - marker, polyline, polygon 이용하여
-                    지도에 표시 ) - 날씨 api 를 활용한 시간별 날씨 표시 - i18n
-                    다국어 설정
+                    2. 수행 업무 및 역할 - 개선 및 솔루션 제안, 디자인 작업물에
+                    대한 Vue.js SPA 개발 <br /> 실시간으로 드론의 Telemetry를
+                    받아 위치 표시 및 각 구역 CRUD 작업 ( google map - marker,
+                    polyline, polygon 이용하여 지도에 표시 ) <br /> - 날씨 api
+                    를 활용한 시간별 날씨 표시 <br />- i18n 다국어 설정
                   </p>
                   <p>3. 기여도 : 50%</p>
                 </div>

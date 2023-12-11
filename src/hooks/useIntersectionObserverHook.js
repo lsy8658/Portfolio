@@ -17,7 +17,7 @@ const useIntersectionObserverHook = (targetRef) => {
       };
 
       observer.current = new window.IntersectionObserver(observerCallback, {
-        threshold: 0.2,
+        threshold: 0,
       });
     }
 
