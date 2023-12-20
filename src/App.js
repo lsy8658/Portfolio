@@ -6,8 +6,7 @@ import { Routers } from "./route/Routers";
 import Nav from "./components/nav/Nav";
 import MusicPlayer from "./components/musicplayer/MusicPlayer";
 import SEOMetaTag from "./components/SEOMetaTag";
-import Project from "./pages/project/Project";
-import Profile from "./pages/profile/Profile";
+
 function App() {
   return (
     <>
@@ -16,8 +15,6 @@ function App() {
         <Nav />
         <div className="main_container">
           <Routers />
-          {/* <Profile />
-          <Project /> */}
         </div>
         <MusicPlayer />
         {/* <div className="copyright">Copyright © LSY 2023. Nov.</div> */}

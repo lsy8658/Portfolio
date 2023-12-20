@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextAnimation from "../../components/textAnimation/TypingAnimation";
 import "./profile.scss";
 import ScrollTopButton from "../../components/scrollTopButton/ScrollTopButton";
+import { scrollHooks } from "../../hooks/scrollHooks";
 export default function Profile() {
+  const { scrollTop } = scrollHooks();
+  useEffect(() => {
+    scrollTop();
+  }, []);
   const [showInfo, setShowInfo] = useState(true);
   const showInfoHandel = () => {
     setShowInfo(!showInfo);

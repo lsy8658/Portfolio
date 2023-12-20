@@ -7,10 +7,38 @@
   max-width: 1048px;
 
   .title {
-    padding: 50px 0 100px;
     color: var(--color-text);
     font-size: 28px;
+    padding: 50px 0 50px;
   }
+  .projectHeader {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .filterBtns {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      width: 100%;
+      max-width: 800px;
+      gap: 10px;
+      button {
+        box-sizing: border-box;
+        background: none;
+        border: 1px solid var(--color-text);
+        color: var(--color-text);
+        padding: 7px 10px;
+        font-size: 16px;
+        border-radius: 13px;
+
+        cursor: pointer;
+        &:hover {
+          border: 1px solid var(--color-music-Box);
+          color: var(--color-music-Box);
+        }
+      }
+    }
+  }
+
   .project_item:nth-of-type(even) {
     flex-direction: row-reverse;
     .project_info {
@@ -54,7 +82,7 @@
     max-width: 1048px;
 
     .title {
-      padding: 50px 0 100px;
+      padding: 50px 0 50px;
       color: var(--color-text);
       font-size: 28px;
     }

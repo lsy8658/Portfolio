@@ -5,6 +5,7 @@ import "./nav.scss";
 import DarkModeToggle from "../darkmode/DarkModeToggle";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+
 export default function Nav() {
   const [menus, setMenus] = useState(false);
   const mobileMenuHandle = () => {

@@ -1,8 +1,11 @@
 import "./project.scss";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ProjectItem from "../../components/projectItem/ProjectItem";
 import ScrollTopButton from "../../components/scrollTopButton/ScrollTopButton";
+import { scrollHooks } from "../../hooks/scrollHooks";
 export default function Project() {
+  const { scrollTop } = scrollHooks();
+
   const containerRef1 = useRef(null);
   const infoRef1 = useRef(null);
   const lineRef1 = useRef(null);
@@ -53,6 +56,7 @@ export default function Project() {
       info: "https://www.notion.so/Sung-yoon-Front-end-eb29ac8b91eb4189a5c3e6a95883122a?p=3be898ccd579456bbc98a550ba07b2bc&pm=c",
       url: "https://studyapp.vercel.app/",
       video: "assets/videos/study-app.mp4",
+      keyWord: ["All", "Full"],
     },
     {
       containerRef: containerRef2,
@@ -77,6 +81,7 @@ export default function Project() {
       info: "https://www.notion.so/Sung-yoon-Front-end-eb29ac8b91eb4189a5c3e6a95883122a?p=54090abb324b4cb3b4e095943083a2de&pm=c",
       url: "https://exhibition-app.netlify.app/",
       video: "assets/videos/gallery.mp4",
+      keyWord: ["All", "Full"],
     },
 
     {
@@ -88,6 +93,7 @@ export default function Project() {
       desc: "진로설계, 학업설계, 수요조사 Front end 작업",
       imgs: ["assets/images/project/careerdesign/main.png"],
       url: "https://careerdesignplatform.co.kr/",
+      keyWord: ["All", "FrontEnd"],
     },
     {
       containerRef: containerRef3,
@@ -108,12 +114,34 @@ export default function Project() {
         "assets/images/project/deep-space-ai/7.png",
       ],
       url: "https://dazzling-granita-b79d5c.netlify.app/",
+      keyWord: ["All", "FrontEnd"],
     },
   ];
+  const [dataKey, setdataKey] = useState("All");
+  const [filterData, setFilterData] = useState(data);
+
+  useEffect(() => {
+    scrollTop();
+  }, []);
+
+  useEffect(() => {
+    const newData = data.filter((item) => {
+      return item.keyWord.includes(dataKey);
+    });
+    newData && setFilterData(newData);
+  }, [dataKey]);
   return (
     <div className="project_section">
-      <h2 className="title">Project</h2>
-      {data.map((item, index) => (
+      <div className="projectHeader">
+        <h2 className="title">Project</h2>
+        <div className="filterBtns">
+          <button onClick={() => setdataKey("All")}>All</button>
+          <button onClick={() => setdataKey("FrontEnd")}>FrontEnd</button>
+          <button onClick={() => setdataKey("Full")}>Full</button>
+        </div>
+      </div>
+
+      {filterData.map((item, index) => (
         <ProjectItem
           key={index}
           containerRef={item.containerRef}
