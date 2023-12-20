@@ -71,4 +71,29 @@
     box-sizing: border-box;
     border-radius: 16px;
   }
+
+  &::before {
+    content: "Click!";
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: var(--color-text);
+    font-size: 16px;
+    animation: blinkAni 0.7s infinite alternate;
+  }
+
+  &:hover {
+    animation: none;
+  }
+}
+
+@keyframes blinkAni {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
