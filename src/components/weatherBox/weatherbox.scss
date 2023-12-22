@@ -83,10 +83,6 @@
     font-size: 16px;
     animation: blinkAni 0.7s infinite alternate;
   }
-
-  &:hover {
-    animation: none;
-  }
 }
 
 @keyframes blinkAni {

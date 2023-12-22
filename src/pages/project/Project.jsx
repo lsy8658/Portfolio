@@ -6,6 +6,10 @@ import { scrollHooks } from "../../hooks/scrollHooks";
 export default function Project() {
   const { scrollTop } = scrollHooks();
 
+  const containerRef0 = useRef(null);
+  const infoRef0 = useRef(null);
+  const lineRef0 = useRef(null);
+
   const containerRef1 = useRef(null);
   const infoRef1 = useRef(null);
   const lineRef1 = useRef(null);
@@ -23,6 +27,22 @@ export default function Project() {
   const lineRef4 = useRef(null);
 
   const data = [
+    {
+      containerRef: containerRef0,
+      lineRef: lineRef0,
+      infoRef: infoRef0,
+      title: "Recipe book",
+      dev: "Frontend",
+      desc: "요리 Recipe 제공 서비스",
+      imgs: [
+        "assets/images/project/recipe/0.png",
+        "assets/images/project/recipe/1.png",
+      ],
+      info: "",
+      url: "https://recipe-app-lsy.netlify.app/",
+      video: "",
+      keyWord: ["All", "FrontEnd"],
+    },
     {
       containerRef: containerRef1,
       lineRef: lineRef1,
