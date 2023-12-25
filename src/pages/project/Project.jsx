@@ -32,7 +32,7 @@ export default function Project() {
       lineRef: lineRef0,
       infoRef: infoRef0,
       title: "Recipe book",
-      dev: "Frontend",
+      dev: "Html5, Css3, Javascript, Tailwindcss",
       desc: "요리 Recipe 제공 서비스",
       imgs: [
         "assets/images/project/recipe/0.png",
@@ -48,7 +48,7 @@ export default function Project() {
       lineRef: lineRef1,
       infoRef: infoRef1,
       title: "Study Cafe",
-      dev: "Frontend + Backend",
+      dev: "NextJs, Redux-toolkit, Scss, Express, MongoDB, Socket.Io",
       desc: "개발 모임을 찾는 사람들에게 쉽게 참여하고 대화할 수 있도록 만들어주는 서비스",
       imgs: [
         "assets/images/project/study-app/main.jpg",
@@ -83,7 +83,7 @@ export default function Project() {
       lineRef: lineRef2,
       infoRef: infoRef2,
       title: "기억 gallery",
-      dev: "Frontend + Backend",
+      dev: "React, Redux, Scss, Express, MongoDB",
       desc: "전시를 직접 보러 가지 않고도 비대면으로 관람할 수 있는 아티스트의 인스타그램",
       imgs: [
         "assets/images/project/gallery/main.png",
@@ -109,7 +109,7 @@ export default function Project() {
       lineRef: lineRef4,
       infoRef: infoRef4,
       title: "커리어디자인",
-      dev: "Frontend",
+      dev: "React, Scss, Javascript",
       desc: "진로설계, 학업설계, 수요조사 Front end 작업",
       imgs: ["assets/images/project/careerdesign/main.png"],
       url: "https://careerdesignplatform.co.kr/",
@@ -120,7 +120,7 @@ export default function Project() {
       lineRef: lineRef3,
       infoRef: infoRef3,
       title: "Deep space Ai",
-      dev: "퍼블리싱 (mobile, web, kiosk)",
+      dev: "Html5, Css3, Javascript",
       desc: "반응형 웹 제작",
       imgs: [
         "assets/images/project/deep-space-ai/main.png",
