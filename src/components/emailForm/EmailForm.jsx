@@ -26,15 +26,15 @@ export default function EmailForm() {
     <form ref={form} onSubmit={sendEmail} className="email_container">
       <div className="input_box">
         <label htmlFor="name">Name:</label>
-        <input type="text" name="user_name" id="name" />
+        <input type="text" name="user_name" placeholder="이름" id="name" />
       </div>
       <div className="input_box">
         <label htmlFor="email">Email:</label>
-        <input type="email" name="user_email" id="email" />
+        <input type="email" name="user_email" placeholder="이메일" id="email" />
       </div>
       <div className="input_box">
         <label htmlFor="msg">Message:</label>
-        <textarea id="msg" name="message" draggable />
+        <textarea id="msg" name="message" placeholder="내용" draggable />
       </div>
 
       <input type="submit" value="Send" className="send" />
