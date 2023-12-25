@@ -37,13 +37,13 @@ export default function TextAnimation(props) {
             className="text"
             sequence={[
               // Same substring at the start will only be typed out once, initially
-              "2023",
-              2000, // wait 1s before replacing "Mice" with "Hamsters"
-              "UXUI",
+              "더 나은",
+              1000, // wait 1s before replacing "Mice" with "Hamsters"
+              "사용자 경험을 제공하기 위해",
+              2000,
+              "항상 고민하는",
               2000,
               "FrontEnd Developer",
-              2000,
-              "PORTFOLIO",
               2000,
             ]}
             wrapper="span"

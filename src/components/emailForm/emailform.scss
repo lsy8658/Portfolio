@@ -1,0 +1,65 @@
+@import "../../globals/mixin.scss";
+.email_container {
+  padding-top: 20px;
+  max-width: 500px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  .input_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+
+    label {
+      width: 19%;
+      color: var(--color-text);
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    input {
+      border: 1px solid var(--color-text);
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 7px 10px;
+      font-size: 13px;
+      width: 90%;
+
+      outline: none;
+    }
+
+    textarea {
+      border-radius: 10px;
+      box-sizing: border-box;
+      padding: 10px;
+      font-size: 13px;
+      width: 90%;
+      outline: none;
+      resize: none;
+      height: 100px;
+      line-height: 30px;
+    }
+  }
+  .send {
+    border: none;
+    background: var(--color-music-Box);
+    color: var(--color-diff-text);
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 7px 0;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
+
+@include md {
+  .email_container {
+    padding-top: 100px;
+    .input_box {
+      padding-top: 30px;
+    }
+  }
+}

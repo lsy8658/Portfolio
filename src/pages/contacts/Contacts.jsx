@@ -1,6 +1,7 @@
 import "./contacts.scss";
 import { FiGithub } from "react-icons/fi";
 import { RxNotionLogo } from "react-icons/rx";
+import EmailForm from "../../components/emailForm/EmailForm";
 export default function Contacts() {
   const links = [
     "https://github.com/lsy8658",
@@ -32,6 +33,7 @@ export default function Contacts() {
             Notion
           </div>
         </div>
+        <EmailForm />
       </div>
     </>
   );
