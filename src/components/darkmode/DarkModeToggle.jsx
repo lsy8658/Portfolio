@@ -20,7 +20,10 @@ export default function DarkModeToggle() {
   };
   return (
     <div className="darkmode_container" onClick={darkmodehandler}>
-      <button className={dark ? "light" : "dark"}></button>
+      <button
+        className={dark ? "light" : "dark"}
+        aria-label="dark mode button"
+      ></button>
     </div>
   );
 }

@@ -37,6 +37,7 @@ export default function MusicPlayer() {
               setCount(count - 1);
             }
           }}
+          aria-label="prev button"
         >
           <GrFormPrevious />
         </button>
@@ -48,6 +49,7 @@ export default function MusicPlayer() {
               setPlay(true);
             }
           }}
+          aria-label="play button"
         >
           {play ? <FaRegStopCircle /> : <AiFillPlayCircle />}
         </button>
@@ -60,6 +62,7 @@ export default function MusicPlayer() {
               setCount(count + 1);
             }
           }}
+          aria-label="next button"
         >
           <GrFormNext />
         </button>

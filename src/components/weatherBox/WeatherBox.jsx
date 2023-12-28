@@ -67,7 +67,11 @@ export default function WeatherBox() {
         <>
           {
             <button className="weatherApiButton" onClick={getWeather}>
-              <img src="assets/images/weatherIcon.png" alt="" />
+              <img
+                src="assets/images/weatherIcon.png"
+                aria-label="weather api button"
+                alt="날씨 조회 버튼"
+              />
             </button>
           }
         </>
