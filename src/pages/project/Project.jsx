@@ -74,7 +74,7 @@ export default function Project() {
         "assets/images/project/study-app/20.png",
       ],
       info: "https://www.notion.so/Sung-yoon-Front-end-eb29ac8b91eb4189a5c3e6a95883122a?p=3be898ccd579456bbc98a550ba07b2bc&pm=c",
-      url: "https://studyapp.vercel.app/",
+      url: "",
       video: "assets/videos/study-app.mp4",
       keyWord: ["All", "Full"],
     },
@@ -99,22 +99,22 @@ export default function Project() {
         "assets/images/project/gallery/11.png",
       ],
       info: "https://www.notion.so/Sung-yoon-Front-end-eb29ac8b91eb4189a5c3e6a95883122a?p=54090abb324b4cb3b4e095943083a2de&pm=c",
-      url: "https://exhibition-app.netlify.app/",
+      url: "",
       video: "assets/videos/gallery.mp4",
       keyWord: ["All", "Full"],
     },
 
-    {
-      containerRef: containerRef4,
-      lineRef: lineRef4,
-      infoRef: infoRef4,
-      title: "커리어디자인",
-      dev: "React, Scss, Javascript",
-      desc: "진로설계, 학업설계, 수요조사 Front end 작업",
-      imgs: ["assets/images/project/careerdesign/main.png"],
-      url: "https://careerdesignplatform.co.kr/",
-      keyWord: ["All", "FrontEnd"],
-    },
+    // {
+    //   containerRef: containerRef4,
+    //   lineRef: lineRef4,
+    //   infoRef: infoRef4,
+    //   title: "커리어디자인",
+    //   dev: "React, Scss, Javascript",
+    //   desc: "진로설계, 학업설계, 수요조사 Front end 작업",
+    //   imgs: ["assets/images/project/careerdesign/main.png"],
+    //   url: "https://careerdesignplatform.co.kr/",
+    //   keyWord: ["All", "FrontEnd"],
+    // },
     {
       containerRef: containerRef3,
       lineRef: lineRef3,
@@ -153,7 +153,7 @@ export default function Project() {
   return (
     <div className="project_section">
       <div className="projectHeader">
-        <h2 className="title">Project</h2>
+        <h2 className="title">개인 Project</h2>
         <div className="filterBtns">
           <button onClick={() => setdataKey("All")}>All</button>
           <button onClick={() => setdataKey("FrontEnd")}>FrontEnd</button>
