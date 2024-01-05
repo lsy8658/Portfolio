@@ -3,10 +3,13 @@ import { Helmet } from "react-helmet-async";
 const MetaTag = () => {
   return (
     <Helmet>
-      <title>이성윤 포트폴리오</title>
+      <title>이성윤의 웹 프론트엔드 포트폴리오</title>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content="#000000" />
-      <meta name="keywords" content="frontend portfolio" />
+      <meta
+        name="keywords"
+        content="프론트엔드, 웹개발, 프로그래밍, 웹디자인, lsy-portfolio, lsy, portfolio, 개발자, 프론트엔드, 프론트엔드 포트폴리오, 이성윤"
+      />
       <meta
         name="description"
         content="프론트엔드 개발자 이성윤의 포트폴리오입니다."
@@ -19,8 +22,14 @@ const MetaTag = () => {
       }
       <meta name="author" content="sungyoon" />
 
-      <meta property="og:site_name" content="이성윤 포트폴리오" />
-      <meta property="og:title" content="이성윤 포트폴리오" />
+      <meta
+        property="og:site_name"
+        content="이성윤의 웹 프론트엔드 포트폴리오"
+      />
+      <meta
+        property="og:title"
+        content="프론트엔드 개발자 이성윤의 포트폴리오입니다."
+      />
       <meta property="og:url" content="https://lsy-portfolio.netlify.app" />
       <meta property="og:image" content="/favicon.png" />
       <meta property="og:type" content="website" data-rh="true" />
@@ -28,10 +37,7 @@ const MetaTag = () => {
         property="og:description"
         content="프론트엔드 개발자 이성윤의 포트폴리오입니다."
       />
-      <meta
-        name="keywords"
-        content="프론트엔드, 웹개발, lsy-portfolio, lsy, portfolio, 개발자, 프론트엔드 포트폴리오, 이성윤"
-      />
+      <meta property="og:locale" content="ko_KR"></meta>
 
       <meta name="subject" content="포트폴리오" />
     </Helmet>

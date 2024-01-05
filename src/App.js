@@ -17,7 +17,9 @@ function App() {
           <Routers />
         </div>
         <MusicPlayer />
-        {/* <div className="copyright">Copyright © LSY 2023. Nov.</div> */}
+        <div className="copyright">
+          Copyright 2023. LSY. All rights reserved.
+        </div>
       </div>
     </>
   );
