@@ -8,8 +8,18 @@ import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import ReactPlayer from "react-player";
 const ProjectItem = (props) => {
-  const { title, dev, desc, info, imgs, containerRef, lineRef, url, video } =
-    props;
+  const {
+    title,
+    dev,
+    desc,
+    info,
+    imgs,
+    containerRef,
+    lineRef,
+    url,
+    video,
+    github,
+  } = props;
   const [showImg, setShowImg] = useState("");
   const [showVideo, setShowVideo] = useState(false);
   const isContainerViewport = useIntersectionObserverHook(
@@ -26,7 +36,6 @@ const ProjectItem = (props) => {
   };
 
   const goToLink = (link) => {
-    console.log(link);
     if (link) window.open(link);
   };
 
@@ -116,6 +125,7 @@ const ProjectItem = (props) => {
           <div className="btns">
             {video && <button onClick={playVideo}>Video</button>}
             {url && <button onClick={() => goToLink(url)}>Link</button>}
+            {github && <button onClick={() => goToLink(github)}>github</button>}
             {info && <button onClick={() => goToLink(info)}>Info</button>}
           </div>
         </div>

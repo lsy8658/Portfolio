@@ -6,6 +6,10 @@ import { scrollHooks } from "../../hooks/scrollHooks";
 export default function Project() {
   const { scrollTop } = scrollHooks();
 
+  const portfolioRef0 = useRef(null);
+  const portfolioInfoRef0 = useRef(null);
+  const portfoliolineRef0 = useRef(null);
+
   const containerRef0 = useRef(null);
   const infoRef0 = useRef(null);
   const lineRef0 = useRef(null);
@@ -28,6 +32,24 @@ export default function Project() {
 
   const data = [
     {
+      containerRef: portfolioRef0,
+      lineRef: portfolioInfoRef0,
+      infoRef: portfoliolineRef0,
+      title: "PortFolio",
+      dev: "React, Scss, Javascript",
+      desc: "PortFolio",
+      imgs: [
+        "assets/images/project/portfolio/1.png",
+        "assets/images/project/portfolio/2.png",
+        "assets/images/project/portfolio/3.png",
+        "assets/images/project/portfolio/4.png",
+      ],
+      info: "",
+      video: "",
+      keyWord: ["All", "FrontEnd"],
+      github: "https://github.com/lsy8658/portfolio",
+    },
+    {
       containerRef: containerRef0,
       lineRef: lineRef0,
       infoRef: infoRef0,
@@ -42,6 +64,7 @@ export default function Project() {
       url: "https://recipe-app-lsy.netlify.app/",
       video: "",
       keyWord: ["All", "FrontEnd"],
+      github: "https://github.com/lsy8658/recipe-app",
     },
     {
       containerRef: containerRef1,
@@ -77,6 +100,7 @@ export default function Project() {
       url: "",
       video: "assets/videos/study-app.mp4",
       keyWord: ["All", "Full"],
+      github: "https://github.com/lsy8658/study-app",
     },
     {
       containerRef: containerRef2,
@@ -102,6 +126,7 @@ export default function Project() {
       url: "",
       video: "assets/videos/gallery.mp4",
       keyWord: ["All", "Full"],
+      github: "https://github.com/lsy8658/exhibition",
     },
 
     // {
@@ -137,7 +162,7 @@ export default function Project() {
       keyWord: ["All", "FrontEnd"],
     },
   ];
-  const [dataKey, setdataKey] = useState("All");
+  const [dataKey, setDataKey] = useState("All");
   const [filterData, setFilterData] = useState(data);
 
   useEffect(() => {
@@ -155,9 +180,9 @@ export default function Project() {
       <div className="projectHeader">
         <h2 className="title">개인 Project</h2>
         <div className="filterBtns">
-          <button onClick={() => setdataKey("All")}>All</button>
-          <button onClick={() => setdataKey("FrontEnd")}>FrontEnd</button>
-          <button onClick={() => setdataKey("Full")}>Full</button>
+          <button onClick={() => setDataKey("All")}>All</button>
+          <button onClick={() => setDataKey("FrontEnd")}>FrontEnd</button>
+          <button onClick={() => setDataKey("Full")}>Full</button>
         </div>
       </div>
 
@@ -174,6 +199,7 @@ export default function Project() {
           url={item.url}
           video={item.video}
           info={item.info}
+          github={item.github}
         />
       ))}
       <ScrollTopButton />
