@@ -20,7 +20,8 @@ const ProjectItem = (props) => {
     lineRef,
     url,
     video,
-    github,
+    githubF,
+    githubB,
   } = props;
   const [showImg, setShowImg] = useState("");
   const [showVideo, setShowVideo] = useState(false);
@@ -139,7 +140,11 @@ const ProjectItem = (props) => {
           <div className="btns">
             {video && <button onClick={playVideo}>Video</button>}
             {url && <button onClick={() => goToLink(url)}>Link</button>}
-            {github && <button onClick={() => goToLink(github)}>github</button>}
+            {githubF && (
+              <button onClick={() => goToLink(githubF)}>Front</button>
+            )}
+            {githubB && <button onClick={() => goToLink(githubB)}>Back</button>}
+
             {info && <button onClick={() => goToLink(info)}>Info</button>}
           </div>
         </div>

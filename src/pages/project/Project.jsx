@@ -47,7 +47,8 @@ export default function Project() {
       info: "",
       video: "",
       keyWord: ["All", "FrontEnd"],
-      github: "https://github.com/lsy8658/portfolio",
+      githubF: "https://github.com/lsy8658/portfolio",
+      githubB: "",
     },
     {
       containerRef: containerRef0,
@@ -64,7 +65,8 @@ export default function Project() {
       url: "https://recipe-app-lsy.netlify.app/",
       video: "",
       keyWord: ["All", "FrontEnd"],
-      github: "https://github.com/lsy8658/recipe-app",
+      githubF: "https://github.com/lsy8658/recipe-app",
+      githubB: "",
     },
     {
       containerRef: containerRef1,
@@ -100,7 +102,8 @@ export default function Project() {
       url: "",
       video: "assets/videos/study-app.mp4",
       keyWord: ["All", "Full"],
-      github: "https://github.com/lsy8658/study-app",
+      githubF: "https://github.com/lsy8658/study-app",
+      githubB: "https://github.com/lsy8658/study-app-server",
     },
     {
       containerRef: containerRef2,
@@ -126,7 +129,8 @@ export default function Project() {
       url: "",
       video: "assets/videos/gallery.mp4",
       keyWord: ["All", "Full"],
-      github: "https://github.com/lsy8658/exhibition",
+      githubF: "https://github.com/lsy8658/exhibition",
+      githubB: "https://github.com/lsy8658/exhibition_server",
     },
 
     // {
@@ -160,6 +164,8 @@ export default function Project() {
       ],
       url: "https://dazzling-granita-b79d5c.netlify.app/",
       keyWord: ["All", "FrontEnd"],
+      githubF: "",
+      githubB: "",
     },
   ];
   const [dataKey, setDataKey] = useState("All");
@@ -199,7 +205,8 @@ export default function Project() {
           url={item.url}
           video={item.video}
           info={item.info}
-          github={item.github}
+          githubF={item.githubF}
+          githubB={item.githubB}
         />
       ))}
       <ScrollTopButton />
