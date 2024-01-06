@@ -1,6 +1,8 @@
 import "./projectItem.scss";
 import useIntersectionObserverHook from "../../hooks/useIntersectionObserverHook";
 import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
 import { EffectCoverflow, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -58,34 +60,46 @@ const ProjectItem = (props) => {
         </div>
         <div className="project_view">
           {imgs.length > 1 ? (
+            // <Swiper
+            //   effect={"coverflow"}
+            //   grabCursor={true}
+            //   centeredSlides={true}
+            //   slidesPerView={2}
+            //   coverflowEffect={{
+            //     rotate: 50,
+            //     stretch: 0,
+            //     depth: 100,
+            //     modifier: 1,
+            //     slideShadows: true,
+            //   }}
+            //   breakpoint={{
+            //     640: {
+            //       slidesPerView: 2,
+            //       spaceBetween: 20,
+            //     },
+            //     1024: {
+            //       slidesPerView: 3,
+            //       spaceBetween: 30,
+            //     },
+            //     1280: {
+            //       slidesPerView: 4,
+            //       spaceBetween: 40,
+            //     },
+            //   }}
+            //   modules={[EffectCoverflow, Pagination]}
+            //   className="swiper"
+            // >
+            //   {imgs &&
+            //     imgs.map((img, index) => (
+            //       <SwiperSlide key={index}>
+            //         <img src={img} onClick={() => showImgFnc(img)} />
+            //       </SwiperSlide>
+            //     ))}
+            // </Swiper>
             <Swiper
-              effect={"coverflow"}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={2}
-              coverflowEffect={{
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: true,
-              }}
-              breakpoint={{
-                640: {
-                  slidesPerView: 2,
-                  spaceBetween: 20,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 30,
-                },
-                1280: {
-                  slidesPerView: 4,
-                  spaceBetween: 40,
-                },
-              }}
-              modules={[EffectCoverflow, Pagination]}
-              className="swiper"
+              pagination={true}
+              modules={[Pagination]}
+              className="mySwiper"
             >
               {imgs &&
                 imgs.map((img, index) => (
